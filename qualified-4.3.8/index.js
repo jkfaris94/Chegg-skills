@@ -57,7 +57,25 @@ window.books = [
    Create and return the HTML to render a single book.
    The `book` parameter is an object representing a single book. 
   */
-  function renderBook(book) {}
+  function renderBook(book) {
+    return `
+    <div class="book">
+      <div class="details">
+        <div class="title">
+          ${book.title}
+          <span class="rating">(${book.rating} stars)</span>
+        </div>
+        <div class="authors">by ${book.authors.join(", ")}</div>
+        <div class="description">
+          ${book.description}
+        </div>
+        <button class="removeBtn">Remove from cart</button>
+      </div>
+      <div class="quantity">${book.quantity} @ $${book.price.toFixed(2)}</div>
+      <div class="price">$${(book.price * book.quantity).toFixed(2)}</div>
+    </div>
+  `;
+  }
   
   /*
     Calculate and return the total price of all items in the cart.
