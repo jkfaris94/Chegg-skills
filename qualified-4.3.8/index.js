@@ -100,7 +100,10 @@ window.books = [
     } else {
       // Render books and total
       cartItems.innerHTML = window.books.map(book => renderBook(book)).join("");
-      totalElement.textContent = `$${calculateTotal().toFixed(2)}`;
+  
+      // Calculate and format total price
+      const total = calculateTotal();
+      totalElement.textContent = `$${Number.isInteger(total) ? total : total.toFixed(2)}`;
     }
   }
 
