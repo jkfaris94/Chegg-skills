@@ -118,6 +118,15 @@ window.onload = render;
     Perform all startup tasks here. Use this function to attach the required event listeners
     then call `render()`.
   */
-  function main() {}
+  function main() {
+      // Attach event listener to the sort button
+  document.getElementById("sortBtn").onclick = function() {
+    sortByPrice();
+    render();
+  };
+  
+  // Initial render of the cart
+  render();
+  }
   
   window.addEventListener("DOMContentLoaded", main);
