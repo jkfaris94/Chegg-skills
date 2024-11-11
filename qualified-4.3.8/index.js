@@ -80,7 +80,9 @@ window.books = [
   /*
     Calculate and return the total price of all items in the cart.
    */
-  function calculateTotal() {}
+  function calculateTotal() {
+    return window.books.reduce((total, book) => total + book.price * book.quantity, 0);
+  }
   
   /*
     Render the array of books and the cart total and insert them on the DOM.
