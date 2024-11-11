@@ -103,14 +103,16 @@ window.books = [
       totalElement.textContent = `$${calculateTotal().toFixed(2)}`;
     }
   }
-  
+
   // Call render on page load
 window.onload = render;
   
   /*
     Sort the `books` array by price in ascending order, then call `render()`.
   */
-  function sortByPrice() {}
+  function sortByPrice() {
+    window.books.sort((a, b) => a.price - b.price);
+  }
   
   /*
     Perform all startup tasks here. Use this function to attach the required event listeners
