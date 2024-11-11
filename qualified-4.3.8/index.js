@@ -89,7 +89,23 @@ window.books = [
     The books should be rendered in the `section` with id "cartItems".
     The total should be rendered in the `section` with id "cartTotal".
   */
-  function render() {}
+  function render() {
+    const cartItems = document.getElementById("cartItems");
+    const totalElement = document.querySelector('.total-price');
+  
+    // Check if the cart has books
+    if (window.books.length === 0) {
+      cartItems.innerHTML = "Nothing in cart";
+      totalElement.textContent = "$0";
+    } else {
+      // Render books and total
+      cartItems.innerHTML = window.books.map(book => renderBook(book)).join("");
+      totalElement.textContent = `$${calculateTotal().toFixed(2)}`;
+    }
+  }
+  
+  // Call render on page load
+window.onload = render;
   
   /*
     Sort the `books` array by price in ascending order, then call `render()`.
