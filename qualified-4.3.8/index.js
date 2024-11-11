@@ -89,47 +89,44 @@ window.books = [
     The books should be rendered in the `section` with id "cartItems".
     The total should be rendered in the `section` with id "cartTotal".
   */
-  function render() {
-    const cartItems = document.getElementById("cartItems");
-    const totalElement = document.querySelector('.total-price');
-  
-    // Check if the cart has books
-    if (window.books.length === 0) {
-      cartItems.innerHTML = "Nothing in cart";
-      totalElement.textContent = "$0";
-    } else {
-      // Render books and total
-      cartItems.innerHTML = window.books.map(book => renderBook(book)).join("");
-  
-      // Calculate and format total price
-      const total = calculateTotal();
-      totalElement.textContent = `$${Number.isInteger(total) ? total : total.toFixed(2)}`;
-    }
-  }
-
-  // Call render on page load
-window.onload = render;
-  
-  /*
-    Sort the `books` array by price in ascending order, then call `render()`.
-  */
-  function sortByPrice() {
-    window.books.sort((a, b) => a.price - b.price);
-  }
-  
-  /*
-    Perform all startup tasks here. Use this function to attach the required event listeners
-    then call `render()`.
-  */
-  function main() {
-      // Attach event listener to the sort button
-  document.getElementById("sortBtn").onclick = function() {
-    sortByPrice();
-    render();
-  };
-  
-  // Initial render of the cart
-  render();
-  }
-  
-  window.addEventListener("DOMContentLoaded", main);
+    function render() {
+        const cartItems = document.getElementById("cartItems");
+        const totalElement = document.querySelector('.total-price');
+      
+        // Check if the cart has books
+        if (window.books.length === 0) {
+          cartItems.innerHTML = "Nothing in cart";
+          totalElement.textContent = "$0";
+        } else {
+          // Render books and total
+          cartItems.innerHTML = window.books.map(book => renderBook(book)).join("");
+          
+          // Calculate and format total price
+          const total = calculateTotal();
+          totalElement.textContent = `$${Number.isInteger(total) ? total : total.toFixed(2)}`;
+        }
+      }
+      
+      /*
+        Sort the `books` array by price in ascending order, then call `render()`.
+      */
+      function sortByPrice() {
+        window.books.sort((a, b) => a.price - b.price);
+        render(); // Re-render the sorted array
+      }
+      
+      /*
+        Perform all startup tasks here. Use this function to attach the required event listeners
+        then call `render()`.
+      */
+      function main() {
+        // Attach event listener to the sort button
+        document.getElementById("sortBtn").onclick = function() {
+          sortByPrice();
+        };
+        
+        // Initial render of the cart
+        render();
+      }
+      
+      window.addEventListener("DOMContentLoaded", main);
