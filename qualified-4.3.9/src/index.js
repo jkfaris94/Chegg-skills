@@ -282,14 +282,26 @@ function renderContact(contact) {
   Render the array of contacts and insert them on the DOM.
   The contacts should be rendered in the `section` with id "contacts".
 */
-function render(contacts) {}
+function render(contacts) {
+    // Select the section with id "contacts"
+    const contactsSection = document.getElementById("contacts");
+
+    // Generate HTML for each contact and join them into a single string
+    const contactsHTML = contacts.map(contact => renderContact(contact)).join("");
+  
+    // Insert the HTML into the section
+    contactsSection.innerHTML = contactsHTML;
+}
 
 /*
   Filter by city. Filter the  array of contacts by the given city.
   Return a new array containing the filtered list. 
   Do NOT modify the original array.
 */
-function filterByCity(city) {}
+function filterByCity(city) {
+    // Return a new array containing contacts with a matching city
+    return contacts.filter(contact => contact.address.city.toLowerCase() === city.toLowerCase());
+}
 
 /*
   Add an `change` event listener to the `filterOptions` select element.
