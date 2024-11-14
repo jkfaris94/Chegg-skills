@@ -51,28 +51,6 @@
   header nav ul li a:hover {
     text-decoration: underline;
   }
-  /* Basic link styling */
-a.bark-link {
-    font-size: 18px; /* Font size */
-    font-weight: bold;
-    color: rgb(10, 10, 68); /* Font color */
-    text-decoration: none; /* Remove underline */
-}
-
-/* Hover effect */
-a.bark-link:hover {
-    color: rgb(153, 8, 8); /* Color on hover */
-}
-
-/* Active/clicked effect */
-a.bark-link:active {
-    color: green; /* Color when clicked */
-}
-
-/* Visited link */
-a.bark-link:visited {
-    color: purple; /* Color after the link has been visited */
-}
 
   /*company logo styling */
 
