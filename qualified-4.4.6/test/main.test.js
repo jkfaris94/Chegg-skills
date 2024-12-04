@@ -144,7 +144,13 @@ describe("src/main.js", () => {
      
     it("should log an error to the console", async () => {
       // Write your solution here
-      expect(1).toBe(2);
+      const errorMessage = "GET request failed.";
+      axios.get.mockImplementation(() => Promise.reject(new Error(errorMessage)));
+      jest.spyOn(console, "error");
+
+      await show(id);
+
+      expect(console.error).toHaveBeenCalledWith(errorMessage);
     });
   }); 
 });  
