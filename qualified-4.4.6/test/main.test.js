@@ -77,12 +77,21 @@ describe("src/main.js", () => {
 
     it("should make a POST request to the appropriate URL with a valid data body", async () => {
       // Write your solution here
-      expect(1).toBe(2);
-    });
+      const expectedURL = `${BASE_URL}/students`;
+      axios.post.mockImplementation(() => Promise.resolve({ data: student }));
+      
+      await create(body);
+      
+      expect(axios.post).toHaveBeenCalledWith(expectedURL, body);
+      });
 
     it("should resolve with a promise containing the newly saved student", async () => {
       // Write your solution here
-      expect(1).toBe(2);
+      axios.post.mockImplementation(() => Promise.resolve({ data: student }));
+
+      const response = await create(body);
+
+      expect(response).toEqual(student);
     });
     
     it("should log an error to the console", async () => {
