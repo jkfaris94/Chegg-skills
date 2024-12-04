@@ -96,7 +96,13 @@ describe("src/main.js", () => {
     
     it("should log an error to the console", async () => {
       // Write your solution here
-      expect(1).toBe(2);
+      const errorMessage = "Post request failed.";
+      axios.post.mockImplementation(() => Promise.reject(new Error(errorMessage)));
+      jest.spyOn(console, "error");
+
+      await create(body);
+
+      expect(console.error).toHaveBeenCalledWith(errorMessage);
     });
   });
   
