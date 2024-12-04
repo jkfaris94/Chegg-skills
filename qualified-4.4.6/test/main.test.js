@@ -125,7 +125,12 @@ describe("src/main.js", () => {
 
     it("should make a GET request to the appropriate URL", async () => {
       // Write your solution here
-      expect(1).toBe(2);
+      const expectedURL = `${BASE_URL}/students/${id}`;
+      axios.get.mockImplementation(() => Promise.resolve({ data: student }));
+
+      await show(id);
+
+      expect(axios.get).toHaveBeenCalledWith(expectedURL);
     });
 
     it("should resolve with a promise containing the student data", async () => {
