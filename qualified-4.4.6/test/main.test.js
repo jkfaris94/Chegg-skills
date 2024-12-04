@@ -135,7 +135,11 @@ describe("src/main.js", () => {
 
     it("should resolve with a promise containing the student data", async () => {
       // Write your solution here
-      expect(1).toBe(2);
+      axios.get.mockImplementation(() => Promise.resolve({ data: student }));
+
+      const response = await show(id);
+
+      expect(response).toEqual(student);
     });
      
     it("should log an error to the console", async () => {
