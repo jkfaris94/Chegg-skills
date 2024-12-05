@@ -25,7 +25,17 @@ function create(body) {
     });
 }
 
-function show(id) {}
+function show(id) {
+  const url = `${BASE_URL}/constellations/${id}`;
+  return axios.get(url)
+    .then(response => {
+      console.log(response.data);
+      return response.data
+    })
+    .catch(error => {
+      console.log(`Error fetching constellation with ID ${id}:`, error);
+    });
+}
 
 function update(id, body) {}
 
