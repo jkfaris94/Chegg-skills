@@ -37,9 +37,29 @@ function show(id) {
     });
 }
 
-function update(id, body) {}
+function update(id, body) {
+  const url = `${BASE_URL}/constellations/${id}`;
+  return axios.put(url, body)
+  .then(response => {
+    console.log(response.data);
+    return response.data
+  })
+  .catch(error => {
+    console.log(`Error updating constellation with ID ${id}:`, error)
+  });
+}
 
-function destroy(id) {}
+function destroy(id) {
+  const url = `${BASE_URL}/constellations/${id}`;
+  return axios.delete(url)
+  .then(response => {
+    console.log(response.data);;
+    return response.data
+  })
+  .catch(error => {
+    console.log(`Error, unable to delete constellation with ID ${id}:`, error)
+  });
+}
 
 module.exports = {
   index,
