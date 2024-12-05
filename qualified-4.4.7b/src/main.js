@@ -13,7 +13,17 @@ function index() {
     });
 }
 
-function create(body) {}
+function create(body) {
+  const url = `${BASE_URL}/constellations`;
+  return axios.post(url, body)
+    .then(response => {
+      console.log(response.data);
+      return response.data
+    })
+    .catch(error => {
+      console.log("Error creating constellation", error);
+    });
+}
 
 function show(id) {}
 
