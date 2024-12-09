@@ -1,13 +1,19 @@
 const axios = require("axios");
 const BASE_URL = "http://localhost:5000";
-const constellationsUrl = `${BASE_URL}/constellations`;
 
-const leo = {
-  name: "Leo",
-  meaning: "Lion",
-  starsWithPlanets: 19,
-  quadrant: "NQ2"
+function update(id, body) {
+  if (!id || !body) return Promise.reject(false);
+  const url = `${BASE_URL}/constellations/${id}`;
+  return axios.put(url, body);
+}
+
+const hydrus = {
+  name: "Hydrus",
+  meaning: "Water Snake",
+  starsWithPlanets: 5,
+  quadrant: "SQ1"
 };
 
-axios.get(constellationsUrl).then(({ data }) => console.log(data));
-axios.post(constellationsUrl, leo).then(({ data }) => console.log(data));
+update("UPtAzfV", hydrus)
+  .then(({ data }) => console.log(data))
+  .catch(console.log);
