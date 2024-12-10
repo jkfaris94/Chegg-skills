@@ -24,18 +24,6 @@ async function fullSession(question) {
   }
 }
 
-
-function fullSession(question) {
-  welcome()
-    .then(console.log)
-    .then(() => getFortune(question))
-    .then(() => goodbye())
-    .then(console.log)
-    .catch((err) => {
-      console.log(`There was an error: ${err}`);
-    });
-}
-
 module.exports = { getFortune, fullSession };
 
 
