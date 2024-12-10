@@ -1,44 +1,32 @@
-interface User {
-    name: string;
-    age: number;
+type uniqueID = number;
+
+interface Author {
+    id: uniqueID;
+    firstName: string;
+    lastName: string;
 }
 
-function processUser(user: User) {
-    if (user.age >= 18) {
-        console.log(`${user.name} is an adult.`);
-    } else {
-        console.log(`${user.name} is a minor.`);
-    }
+interface Book {
+    id: uniqueID;
+    title: string;
+    author: Author;
+    isAvailable: boolean;
 }
 
-// Example usage
-const user1: User = { name: "Alice", age: 25 };
-const user2: User = { name: "Bob", age: 16 };
-
-processUser(user1);  // Output: Alice is an adult.
-processUser(user2);  // Output: Bob is a minor.
-
-//enum
-enum StatusCode { 
-    Success = 200, 
-    NotFound = 404, 
-    Error = 500 
-  }
-  let response: StatusCode = StatusCode.Success;
-
-//tuple
-let book: [string, string, number] = ["The Hobbit", "J.R.R. Tolkien", 295];
-console.log(book);
-
-function firstElement<T>(elements: T[]): T | undefined {
-    return elements.length > 0 ? elements[0] : undefined;
-    
-    // Usage
-let names = ["Alice", "Bob", "Charlie"];
-let ages = [30, 25, 35];
-
-let firstName = firstElement(names); // Automatically inferred as firstElement<string>
-let firstAge = firstElement(ages); // Automatically inferred as firstElement<number>
+const author01: Author = {
+    id: 1,
+    firstName: "John",
+    lastName: "Wick"
 }
 
-console.log(firstElement); 
+const book01: Book = {
+    id: 1,
+    title: "Take Care of Dogs",
+    author: author01,
+    isAvailable: true
+}
+const checkAvailable = (book: Book) => {
+    return book01.isAvailable ? "available" : "rented out";
+}
+
+console.log(`the book ${book01.title} by author ${book01.author.lastName}, ${book01.author.firstName[0]} is ${checkAvailable(book01)}`);
