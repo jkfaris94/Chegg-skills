@@ -9,6 +9,22 @@ async function getFortune(question) {
     console.log(`There was an error: ${err}`);
   }
 }
+
+async function fullSession(question) {
+  try {
+    const welcomeMessage = await welcome();
+    console.log(welcomeMessage);
+
+    await getFortune(question);
+
+    const goodbyeMessage = await goodbye();
+    console.log(goodbyeMessage);
+  } catch (err) {
+    console.log(`There was an error: ${err}`);
+  }
+}
+
+
 function fullSession(question) {
   welcome()
     .then(console.log)
