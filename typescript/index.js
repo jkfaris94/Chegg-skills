@@ -22,3 +22,12 @@ var response = StatusCode.Success;
 //tuple
 var book = ["The Hobbit", "J.R.R. Tolkien", 295];
 console.log(book);
+function firstElement(elements) {
+    return elements.length > 0 ? elements[0] : undefined;
+    // Usage
+    var names = ["Alice", "Bob", "Charlie"];
+    var ages = [30, 25, 35];
+    var firstName = firstElement(names); // Automatically inferred as firstElement<string>
+    var firstAge = firstElement(ages); // Automatically inferred as firstElement<number>
+}
+console.log(firstElement);
