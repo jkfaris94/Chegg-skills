@@ -19,6 +19,22 @@ function update(constellation) {
     });
 }
 
-function bulkImport(constellations) {}
+function bulkImport(constellations) {
+  if (!Array.isArray(constellations)) {
+    return Promise.reject({
+      error: "Inputted argument must be an array.",
+    });
+  }
+
+  if (!constellations.every(isValid)) {
+    return Promise.reject({
+      error: "All constellations must include relevant fields.",
+    });
+  }
+
+  const requests = constellations.map(update);
+
+  return Promise.allSettled(requests);
+}
 
 module.exports = { bulkImport, update };
