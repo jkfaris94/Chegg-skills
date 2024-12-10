@@ -1,16 +1,14 @@
 const { welcome, goodbye, tell } = require("../utils/fortune-teller");
 
-function getFortune(question) {
-  tell(question)
-    .then((response) => {
-      console.log(`Your question was: ${question}`);
-      console.log(`Your fortune is: ${response}`);
-    })
-    .catch((err) => {
-      console.log(`There was an error: ${err}`);
-    });
+async function getFortune(question) {
+  try {
+    const response = await tell(question);
+    console.log(`Your question was: ${question}`);
+    console.log(`Your fortune is: ${response}`);
+  } catch (err) {
+    console.log(`There was an error: ${err}`);
+  }
 }
-
 function fullSession(question) {
   welcome()
     .then(console.log)
