@@ -30,3 +30,12 @@ const checkAvailable = (book: Book) => {
 }
 
 console.log(`the book ${book01.title} by author ${book01.author.lastName}, ${book01.author.firstName[0]} is ${checkAvailable(book01)}`);
+
+
+function addNumbers(a: number, b: number): number {
+    return a + b;
+}
+
+function concatenateStrings(first: string, second: string): string {
+    return first + second;
+}
