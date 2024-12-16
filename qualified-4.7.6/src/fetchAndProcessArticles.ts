@@ -6,6 +6,8 @@ export interface Article {
 
 export interface ProcessedArticle extends Article {
   // TODO: add the properties
+  timestamp: string;
+  status: string;
 }
 
 // TODO: type the function parameter and its return type
