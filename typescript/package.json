@@ -1,7 +1,6 @@
 {
   "name": "typescript",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "tsc:build": "tsc",
@@ -13,5 +12,6 @@
   "license": "ISC",
   "devDependencies": {
     "typescript": "^5.7.2"
-  }
+  },
+  "description": ""
 }

@@ -1,15 +1,22 @@
-var author01 = {
+"use strict";
+const author01 = {
     id: 1,
     firstName: "John",
     lastName: "Wick"
 };
-var book01 = {
+const book01 = {
     id: 1,
     title: "Take Care of Dogs",
     author: author01,
     isAvailable: true
 };
-var checkAvailable = function (book) {
+const checkAvailable = (book) => {
     return book01.isAvailable ? "available" : "rented out";
 };
-console.log("the book ".concat(book01.title, " by author ").concat(book01.author.lastName, ", ").concat(book01.author.firstName[0], " is ").concat(checkAvailable(book01)));
+console.log(`the book ${book01.title} by author ${book01.author.lastName}, ${book01.author.firstName[0]} is ${checkAvailable(book01)}`);
+function addNumbers(a, b) {
+    return a + b;
+}
+function concatenateStrings(first, second) {
+    return first + second;
+}
