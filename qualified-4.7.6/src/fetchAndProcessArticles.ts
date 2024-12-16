@@ -11,7 +11,7 @@ export interface ProcessedArticle extends Article {
 }
 
 // TODO: type the function parameter and its return type
-export async function fetchAndProcessArticles(url) {
+export async function fetchAndProcessArticles(url: string) {
   try {
     const response = await fetch(url);
     if (!response.ok) {
