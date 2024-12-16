@@ -31,7 +31,7 @@ export function listTasks(tasks: Task[]): void {
 }
 
 // Add the proper return type for the fetchTasks function below
-export async function fetchTasks()> {
+export async function fetchTasks(): Promise<Task[]> {
   const mockTasks: Task[] = [
     { title: 'Task 1', description: 'Description 1', status: false, dueDate: new Date() },
     { title: 'Task 2', description: 'Description 2', status: false, dueDate: new Date() },

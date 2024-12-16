@@ -6,7 +6,8 @@
         "preserveConstEnums": true,
         "outFile": "../../built/local/tsc.js",
         "sourceMap": true,
-        "esModuleInterop": true
+        "esModuleInterop": true,
+        "target": "es6",
     },
     "include": [
         "src/**/*"
