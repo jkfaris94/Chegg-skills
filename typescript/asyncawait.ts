@@ -6,3 +6,14 @@ interface GitHubUser {
     followers: number; // Number of followers
     following: number; // Number of users this user is following
 }
+
+// Async function to fetch GitHub user information
+async function fetchGitHubUserInfo(username: string): Promise<GitHubUser> {
+    const apiURL = `https://api.github.com/users/${username}`;
+    const response = await fetch(apiURL);
+    if (!response.ok) {
+        throw new Error(`Failed to fetch user data: ${response.status} ${response.statusText}`);
+    }
+    const userData: GitHubUser = await response.json();
+    return userData;
+}
