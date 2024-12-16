@@ -17,13 +17,14 @@ export function addTask(title: string, description: string, dueDate: Date): Task
 }
 
 // Complete the function below, making sure to type its parameters and return output
-export function completeTask() {
-  return {};
+export function completeTask(task: Task): Task {
+  task.status = true;
+  return task;
 }
 
 // Type the function parameter of the listTasks function
 // Curious about the keyword `void`? Use ChatGPT or SkillMate to see if you can find out what it does!
-export function listTasks(tasks): void {
+export function listTasks(tasks: Task[]): void {
   tasks.forEach(task => {
     console.log(`${task.title} - ${task.status ? 'Completed' : 'Incomplete'}`);
   });
