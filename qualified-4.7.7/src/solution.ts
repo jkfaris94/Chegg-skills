@@ -7,8 +7,13 @@ export interface Task {
 }
 
 // Complete the function below, making sure to type its parameters and return output
-export function addTask() {
-  return {};
+export function addTask(title: string, description: string, dueDate: Date): Task {
+  return {
+    title,
+    description,
+    status: false,
+    dueDate
+   };
 }
 
 // Complete the function below, making sure to type its parameters and return output
