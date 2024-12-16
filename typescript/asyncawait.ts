@@ -17,3 +17,7 @@ async function fetchGitHubUserInfo(username: string): Promise<GitHubUser> {
     const userData: GitHubUser = await response.json();
     return userData;
 }
+
+fetchGitHubUserInfo("octocat")
+  .then((userData) => console.log(userData))
+  .catch((error) => console.error(error));
