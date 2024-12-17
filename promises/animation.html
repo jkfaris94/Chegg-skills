@@ -18,6 +18,7 @@
         if (leftPosition < 200) {
           console.log(`Before animateDiv`);
           animateDiv();
+          requestAnimationFrame(animateDiv);
           console.log(`After animateDiv`);
         }
 
