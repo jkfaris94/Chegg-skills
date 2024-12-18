@@ -24,7 +24,21 @@ function getTotalWins(games) {
 
 /* Use an AI assistant to help you write the following function */
 function printWinLossStatus(games) {
+  const result = [];
 
+  for (const game in games) {
+    const { wins, lost } = games[game];
+
+    if (wins > lost) {
+      result.push("has more wins");
+    } else if (wins < lost) {
+      result.push("has more losses");
+    } else {
+      result.push("has the same number of wins and losses");
+    }
+  }
+
+  return result;
 }
 
 module.exports = {
