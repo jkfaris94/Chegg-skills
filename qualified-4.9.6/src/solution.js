@@ -14,7 +14,9 @@ function getTotalWins(games) {
   let totalWins = 0;
 
   for (const game in games) {
-    totalWins = games[game];
+    // Each game entry in 'games' is an object like { wins: number, lost: number }
+    // We need to sum up the "wins" property of each game.
+    totalWins += games[game].wins;
   }
 
   return totalWins;
