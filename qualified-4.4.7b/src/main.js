@@ -2,63 +2,43 @@ const axios = require("../utils/axios");
 const BASE_URL = "http://localhost:5000";
 
 function index() {
-  const url = `${BASE_URL}/constellations`;
-  return axios.get(url)
-    .then(response => {
-      console.log(response.data); // Log the data key
-      return response.data; // Return all constellation resources
-    })
-    .catch(error => {
-      console.error("Error fetching constellations:", error);
-    });
+  axios
+  .get(`${BASE_URL}/constellations`)
+  .then((response) => {
+    console.log(response.data);
+  })
 }
 
 function create(body) {
-  const url = `${BASE_URL}/constellations`;
-  return axios.post(url, body)
-    .then(response => {
-      console.log(response.data);
-      return response.data
-    })
-    .catch(error => {
-      console.log("Error creating constellation", error);
-    });
+  axios
+  .post(`${BASE_URL}/constellations`, body)
+  .then((response) => {
+    console.log(response.data);
+  })
 }
 
 function show(id) {
-  const url = `${BASE_URL}/constellations/${id}`;
-  return axios.get(url)
-    .then(response => {
-      console.log(response.data);
-      return response.data
-    })
-    .catch(error => {
-      console.log(`Error fetching constellation with ID ${id}:`, error);
-    });
+  axios
+  .get(`${BASE_URL}/constellations/${id}`)
+  .then((response) => {
+    console.log(response.data);
+  })
 }
 
 function update(id, body) {
-  const url = `${BASE_URL}/constellations/${id}`;
-  return axios.put(url, body)
-  .then(response => {
+  axios
+  .put(`${BASE_URL}/constellations/${id}`, body)
+  .then((response) => {
     console.log(response.data);
-    return response.data
   })
-  .catch(error => {
-    console.log(`Error updating constellation with ID ${id}:`, error)
-  });
 }
 
 function destroy(id) {
-  const url = `${BASE_URL}/constellations/${id}`;
-  return axios.delete(url)
-  .then(response => {
-    console.log(response.data);;
-    return response.data
+  axios
+  .delete(`${BASE_URL}/constellations/${id}`)
+  .then((response) => {
+    console.log(response.data);
   })
-  .catch(error => {
-    console.log(`Error, unable to delete constellation with ID ${id}:`, error)
-  });
 }
 
 module.exports = {
