@@ -1,13 +1,8 @@
 const axios = require("axios");
 
-const url = "http://localhost:5001/constellations";
+const url = "http://localhost:5001/constellations/CCB75Bs";
 axios
-.post(url, {
-    name: "Ara",
-    meaning: "Altar",
-    starsWithPlanets: 7,
-    quadrant: "SQ3"
-})
+.delete(url)
 .then((response) => {
     console.log(response.data);
 });
