@@ -75,3 +75,29 @@ const myPromise = new Promise((resolve, reject) => {
           
           getData();
           
+          //Handling Multiple Promises in Parallel
+          function getPromise1() {
+            return new Promise((resolve) => {
+              setTimeout(() => {
+                resolve('Promise 1 resolved');
+              }, 1000);
+            });
+          }
+          
+          function getPromise2() {
+            return new Promise((resolve) => {
+              setTimeout(() => {
+                resolve('Promise 2 resolved');
+              }, 1500);
+            });
+          }
+          
+          Promise.all([getPromise1(), getPromise2()])
+            .then((values) => {
+              console.log(values); 
+              // ["Promise 1 resolved", "Promise 2 resolved"]
+            })
+            .catch((error) => {
+              console.error(error);
+            });
+          
