@@ -101,3 +101,11 @@ const myPromise = new Promise((resolve, reject) => {
               console.error(error);
             });
           
+            //using promise.race
+            Promise.race([getPromise1(), getPromise2()])
+  .then((value) => {
+    console.log('First promise resolved:', value);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
