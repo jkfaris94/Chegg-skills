@@ -25,7 +25,7 @@ const myPromise = new Promise((resolve, reject) => {
     });
   
 
-    //chaining promises
+    //chaining promises example
     const firstPromise = new Promise((resolve) => {
         setTimeout(() => {
           resolve('First promise resolved');
@@ -53,3 +53,25 @@ const myPromise = new Promise((resolve, reject) => {
           console.error(error);
         });
       
+
+        //using async/await 
+        function fetchData() {
+            return new Promise((resolve, reject) => {
+              setTimeout(() => {
+                const data = { id: 1, name: 'Example' };
+                resolve(data);
+              }, 1000);
+            });
+          }
+          
+          async function getData() {
+            try {
+              const result = await fetchData(); // Wait until the promise is fulfilled
+              console.log(result); // { id: 1, name: 'Example' }
+            } catch (error) {
+              console.error(error);
+            }
+          }
+          
+          getData();
+          
