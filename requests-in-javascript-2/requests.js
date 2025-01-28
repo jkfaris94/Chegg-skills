@@ -25,3 +25,13 @@ axios.get(url) //make get request to url
             console.log(error.message);
         });
 
+        const deleteURL = "http://localhost:5001/constellations/iK0hLWS" //declare new url with provided id
+
+        axios
+        .delete(deleteURL) //make delete request to new url 
+        .then((response) => {
+            console.log("delete successful", response.data);
+        })
+        .catch((error) => {
+            console.log("oops", error.message);
+        });
