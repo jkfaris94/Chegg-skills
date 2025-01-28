@@ -1,15 +1,15 @@
 const axios = require("axios");  //require axios
 
 const url = "http://localhost:5001/constellations"; //declare url 
-axios.get(url) //make get request to url 
-    .then((response) => { //response is the argument 
-        console.log(response.status); //print code of the service status
-        console.log(response.statusText); //response type of the server
-        console.log(response.data); //response body
-    })
-    .catch((error) => {
-        console.log(error.message); //print the error message if an error occurs
-    })
+// axios.get(url) //make get request to url 
+//     .then((response) => { //response is the argument 
+//         console.log(response.status); //print code of the service status
+//         console.log(response.statusText); //response type of the server
+//         console.log(response.data); //response body
+//     })
+//     .catch((error) => {
+//         console.log(error.message); //print the error message if an error occurs
+//     })
 
     // axios 
     //     .post(url, { //post method has 2 arguments (server url, data object)
@@ -35,3 +35,15 @@ axios.get(url) //make get request to url
     //     .catch((error) => {
     //         console.log("oops", error.message);
     //     });
+    // axios //bulk delete method, does not work, must not be supported
+    // .delete(url, {
+    //     data: {
+    //         id: ["xKLErq9", "0UYVnS6"]
+    //     }
+    // })
+    // .then(response => {
+    //     console.log("bulk delete worked", response.data);
+    // })
+    // .catch((error) => {
+    //     console.log("didnt work", error.message);
+    // });
