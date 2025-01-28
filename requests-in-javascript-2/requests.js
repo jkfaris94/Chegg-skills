@@ -47,3 +47,21 @@ const url = "http://localhost:5001/constellations"; //declare url
     // .catch((error) => {
     //     console.log("didnt work", error.message);
     // });
+
+
+    //new method of multiple parallel requests
+    const idsToDelete = ["xKLErq9", "0UYVnS6", "rN0mKRW"]; //declare idsToDelete array
+
+    //create an array of delete promises
+    const deletePromises = idsToDelete.map(id => 
+        axios.delete(`http://localhost:5001/constellations/${id}`)
+    );
+
+    //execute promises in parallel
+    Promise.all(deletePromises) 
+        .then(result => {
+            console.log("All delete succeeded", result);
+        })
+        .catch(error => {
+            console.log("at least one delete failled", error.message);
+        });
