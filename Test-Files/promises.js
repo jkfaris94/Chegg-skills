@@ -10,4 +10,6 @@ let sayHello = new Promise(function (resolve, reject) {
 // handle the promise once it resolves
 sayHello.then(function (msg) {
     console.log(msg);
+}).catch(function (error) {
+    console.warn(error);
 });

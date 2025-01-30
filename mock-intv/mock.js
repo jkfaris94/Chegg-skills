@@ -11,6 +11,15 @@ async function getRates(baseCurrency) {
 }
 }
 
-getRates("USD").then(rates => {
-    console.log("Rates:", rates);
+// .then .catch method
+
+function getRates(currency) {
+    const url = `https://api.frankfurter.app/latest?from=${currency}`;
+    
+  return axios.get(url)
+    .then(response => response.data.rates)
+    .catch(error => {
+    console.error(error.message);
   });
+  }
+  getRates(usd) 
