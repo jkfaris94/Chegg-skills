@@ -15,3 +15,4 @@ Promise: is an objest that represents the eventual completion or failure of an a
 Event loop: a design pattern that a program may use to prioritize certain lines of code for execution.
 Synchronous code: Code that runs one line after another in the order the lines were provided.
 Asynchronous code: Code that executes multiple instructions simultaneously, and the order in which the instructions complete isn't known. 
+Fetch API: modern, built-in JavaScript interface for making HTTP requests. It provide a cleaner, promise-based syntax to replace or supplement the older XMLHttpRequest (XHR) approach.
