@@ -3,3 +3,8 @@ REST API: Representational State Transfer is an API that follows the REST style.
 JSON: A lightweight data-interchange format, easy to read and write for humans and machines.
 Callback: A function passed as an argument to another function, to be executed after an operation.
 Domain name system: DNS, A service that acts as a lookup, translating a domain into an actual IP addess.
+HTTP request method: Also called an HTTP verb, a method that indicates the desired action (such as deleting a resource) to be taken on a given resource.
+Header: information included on the request and response, which generally contains metadata such as authorization information, cookies, and when the request happened.
+request body: Information that is sent on a request that isn't included in the URL.
+Response body: information that is sent back from the server.
+status code: the part of the response that gives a quick indication as to how the request went.
