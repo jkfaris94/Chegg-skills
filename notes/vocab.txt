@@ -1,0 +1,5 @@
+API: A set of rules and definitions that specifies how different software systems interact.
+REST API: Representational State Transfer is an API that follows the REST style. 
+JSON: A lightweight data-interchange format, easy to read and write for humans and machines.
+Callback: A function passed as an argument to another function, to be executed after an operation.
+Domain name system: DNS, A service that acts as a lookup, translating a domain into an actual IP addess.
