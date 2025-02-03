@@ -8,3 +8,6 @@ Header: information included on the request and response, which generally contai
 request body: Information that is sent on a request that isn't included in the URL.
 Response body: information that is sent back from the server.
 status code: the part of the response that gives a quick indication as to how the request went.
+npm: (short for Node Package Manager) is the default package manager for the Node.js runtime enviorment.
+Axios: is a popular, lightweight, and promise-based HTTP client for Javascript. It's most commonly used in the context of web applications to make HTTP requests from the browser of from a node.ja enviorment.
+Node.js: is a popular open-source, cross-platform JavaScript runtime enviornment. Instead of running JavaScript code in a browser, Node.js allows you to run JavaScript on the server (or on your local machine) just like you'd run programs in other languages.
