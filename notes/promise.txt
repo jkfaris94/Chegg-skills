@@ -1,0 +1,76 @@
+In JavaScript, Promises have both instance methods (like .then(), .catch(), and .finally()) and static methods on the Promise class (like Promise.all() and Promise.race()). Below is a quick overview of the most common ones:
+
+1. Instance Methods
+.then(onFulfilled, onRejected?)
+
+Called when a promise is fulfilled.
+You can optionally provide a second callback for when the promise is rejected (though .catch() is usually preferred for rejection handling).
+Returns a new promise, allowing chaining.
+.catch(onRejected)
+
+Handles errors (when a promise is rejected).
+You can chain .catch() after one or more .then() calls to catch any error that might have occurred in the chain.
+.finally(onFinally)
+
+Called after a promise is settled (whether fulfilled or rejected).
+Great for cleanup operations (like hiding a loading spinner).
+Doesn’t receive the promise’s value or error; it’s only for side effects.
+2. Static Methods
+Promise.resolve(value)
+
+Returns a promise that is immediately fulfilled with the given value.
+Useful for converting a value to a promise or for testing async flows.
+Promise.reject(reason)
+
+Returns a promise that is immediately rejected with the given error reason.
+Similar to Promise.resolve, but for an error scenario.
+Promise.all(iterable)
+
+Takes an array (or iterable) of promises and returns a new promise that:
+Fulfills with an array of results if all the promises in the iterable fulfill.
+Rejects if any promise in the iterable rejects.
+Often used when you need multiple async operations to finish before proceeding.
+Promise.race(iterable)
+
+Returns a promise that fulfills or rejects as soon as any of the promises in the iterable do.
+Often used to implement timeouts or to pick the “fastest” promise.
+Promise.allSettled(iterable)
+
+Returns a promise that always fulfills, with an array of results describing each promise’s outcome (either fulfilled or rejected).
+Useful if you want to know the status of every promise without stopping on the first rejection.
+Promise.any(iterable)
+
+Returns a promise that fulfills as soon as any promise in the iterable fulfills, or rejects if all of them reject.
+Great when you only need one successful result.
+Example:
+
+js
+// Using instance methods: then, catch, finally
+fetch('https://api.example.com/data')
+  .then(response => response.json())
+  .then(data => {
+    console.log('Data:', data);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  })
+  .finally(() => {
+    console.log('Done fetching');
+  });
+
+// Using static methods: Promise.all
+const p1 = Promise.resolve(10);
+const p2 = fetch('https://api.example.com/data').then(r => r.json());
+const p3 = new Promise((resolve, reject) => setTimeout(resolve, 1000, 'done'));
+
+Promise.all([p1, p2, p3])
+  .then(([val1, val2, val3]) => {
+    console.log('All results:', val1, val2, val3);
+  })
+  .catch(error => {
+    console.error('At least one promise failed:', error);
+  });
+In summary:
+
+Instance methods (.then(), .catch(), .finally()) let you handle how each individual Promise resolves or fails.
+Static methods (Promise.all(), Promise.race(), Promise.allSettled(), etc.) are powerful utilities to combine and coordinate multiple promises in different ways.
