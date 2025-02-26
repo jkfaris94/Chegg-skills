@@ -1,15 +1,14 @@
 const axios = require("axios");
 
-const url = "https://jsonplaceholder.typicode.com/posts";
-
-async function test() {
-    try {
-        const response = await axios.get(url);
-        console.log("response", response.data.map(post => [post.title, post.id]));
-  //      return response.data.map
-      } catch (error) {
-        console.error(error);
-      }
+//Write your function here
+async function getAllCountries() {
+  const url = "https://restcountries.com/v3.1/all";
+  
+  try {
+    const response = await axios.get(url);
+    return response.data.map(country => ({name: country.name.common, region: country.region}));
+  } catch (error) {
+    console.error(error);
+  }
 }
-
-test();
+getAllCountries().then(countries => console.log(countries));
