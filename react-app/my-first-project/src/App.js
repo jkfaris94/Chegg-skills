@@ -1,7 +1,9 @@
 import "./App.css";
 
 function App() {
-  const element = <p>Hello, there!</p>;
+  const name = "Alice";
+  const element = <p>Hello, {name}!</p>;
+
   return element;
 }
 
