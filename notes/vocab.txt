@@ -22,3 +22,5 @@ Named export: A value exported from a file that already has a given name associa
 Default export: 
 The default value of a file when it is imported.
 JSX: JSX is an HTML-like syntax for defining user interface elements right inside your React code.
+Functional component: A JavaScript function that returns JSX.
+Prop: An input passed into a React component as an object.
