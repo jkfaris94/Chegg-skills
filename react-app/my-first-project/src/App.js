@@ -1,16 +1,11 @@
 import "./App.css";
 
-function App() {
-  const name = "Alice";
-  const element = (
-    <>
-      <h1>Hello {name}!</h1>
-      <h2>Have a good day.</h2>
-      <p> this is further sample stuff</p>
-    </>
-  );
+function WelcomeBack() {
+  return <p>Welcome back, valued customer!</p>;
+}
 
-  return element;
+function App() {
+  return <WelcomeBack />;
 }
 
 export default App;
