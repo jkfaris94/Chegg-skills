@@ -24,3 +24,4 @@ The default value of a file when it is imported.
 JSX: JSX is an HTML-like syntax for defining user interface elements right inside your React code.
 Functional component: A JavaScript function that returns JSX.
 Prop: An input passed into a React component as an object.
+Conditional rendering: Using conditional statements to either display or not display content.
