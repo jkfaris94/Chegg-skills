@@ -18,3 +18,6 @@ Asynchronous code: Code that executes multiple instructions simultaneously, and 
 Fetch API: modern, built-in JavaScript interface for making HTTP requests. It provide a cleaner, promise-based syntax to replace or supplement the older XMLHttpRequest (XHR) approach.
 JavaScript Syntax Expression: Known as JSX, JavaScript Syntax Expression allows developers to write HTML-like syntax in JavaScript files.
 React fragment: Syntax that lets you add multiple elements to a React component without wrapping them in an extra DOM node.
+Named export: A value exported from a file that already has a given name associated with it.
+Default export: 
+The default value of a file when it is imported.
