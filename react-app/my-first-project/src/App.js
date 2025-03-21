@@ -1,8 +1,6 @@
 import "./App.css";
+import WelcomeBack from "./WelcomeBack";
 
-function WelcomeBack() {
-  return <p>Welcome back, valued customer!</p>;
-}
 
 function EncouragingWords() {
   return <p>Believe it</p>;
