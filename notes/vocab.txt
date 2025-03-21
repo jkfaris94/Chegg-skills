@@ -21,3 +21,4 @@ React fragment: Syntax that lets you add multiple elements to a React component 
 Named export: A value exported from a file that already has a given name associated with it.
 Default export: 
 The default value of a file when it is imported.
+JSX: JSX is an HTML-like syntax for defining user interface elements right inside your React code.
