@@ -16,3 +16,5 @@ Event loop: a design pattern that a program may use to prioritize certain lines 
 Synchronous code: Code that runs one line after another in the order the lines were provided.
 Asynchronous code: Code that executes multiple instructions simultaneously, and the order in which the instructions complete isn't known. 
 Fetch API: modern, built-in JavaScript interface for making HTTP requests. It provide a cleaner, promise-based syntax to replace or supplement the older XMLHttpRequest (XHR) approach.
+JavaScript Syntax Expression: Known as JSX, JavaScript Syntax Expression allows developers to write HTML-like syntax in JavaScript files.
+React fragment: Syntax that lets you add multiple elements to a React component without wrapping them in an extra DOM node.
