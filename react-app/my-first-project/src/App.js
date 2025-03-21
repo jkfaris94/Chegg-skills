@@ -1,7 +1,8 @@
 import "./App.css";
 
 function App() {
-  return <h1>Hello World!</h1>;
+  const element = <p>Hello, there!</p>;
+  return element;
 }
 
 export default App;
