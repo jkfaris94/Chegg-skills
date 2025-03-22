@@ -26,3 +26,5 @@ Functional component: A JavaScript function that returns JSX.
 Prop: An input passed into a React component as an object.
 Conditional rendering: Using conditional statements to either display or not display content.
 Key: A special property that is added to repeating elements such as list items; each value for the key property must be unique across the list.
+Project generator: 
+An application or script that creates a template project for you. Project generators make it easier for developers to get started when working with a complex framework.
