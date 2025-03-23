@@ -8,8 +8,23 @@ const todos = [
 ];
 
 function App() {
-  const listItems = todos.map((todo, index) => <li key={index}>{todo}</li>);
-  return <ul>{listItems}</ul>;
+  const listItems = todos.map(({completed, description}, index) => (
+    <tr key={index}>
+      <td>{description}</td>
+      <td>{completed ? "yes" : "no"}</td>
+    </tr>
+  ));
+
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Completed?</th>
+        </tr>
+      </thead>
+    </table>
+  );
 }
 
 export default App;
