@@ -7,7 +7,7 @@ const todos = [
 ];
 
 function App() {
-  const listItems = todos.map(({completed, description}, index) => (
+  const rows = todos.map(({completed, description}, index) => (
     <tr key={index}>
       <td>{description}</td>
       <td>{completed ? "yes" : "no"}</td>
@@ -22,6 +22,7 @@ function App() {
           <th>Completed?</th>
         </tr>
       </thead>
+      <tbody>{rows}</tbody>
     </table>
   );
 }
