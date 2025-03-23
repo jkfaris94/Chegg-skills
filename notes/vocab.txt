@@ -28,3 +28,4 @@ Conditional rendering: Using conditional statements to either display or not dis
 Key: A special property that is added to repeating elements such as list items; each value for the key property must be unique across the list.
 Project generator: 
 An application or script that creates a template project for you. Project generators make it easier for developers to get started when working with a complex framework.
+CSS framework: A library of various web design components that can be applied to multiple projects.
