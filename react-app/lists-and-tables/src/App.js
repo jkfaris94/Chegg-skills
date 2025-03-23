@@ -2,9 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 
 const todos = [
-  "finish coding lesson",
-  "clean my desk",
-  "make lunch"
+  { completed: false, description: "Finish the Lists & Tables checkpoint" },
+  { completed: false, description: "Clean my desk" },
+  { completed: false, description: "Make lunch" },
 ];
 
 function App() {
