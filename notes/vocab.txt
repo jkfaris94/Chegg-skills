@@ -29,3 +29,5 @@ Key: A special property that is added to repeating elements such as list items; 
 Project generator: 
 An application or script that creates a template project for you. Project generators make it easier for developers to get started when working with a complex framework.
 CSS framework: A library of various web design components that can be applied to multiple projects.
+Jest: A popular and powerful Javascript testing framework.
+Smoke test: A test that verifies that a component can render without throwing an error.
