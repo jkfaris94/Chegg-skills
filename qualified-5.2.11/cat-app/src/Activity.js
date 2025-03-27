@@ -7,10 +7,10 @@ import "./Activity.css";
 
 function Activity({ time = "All Day", description = "Unknown" }) {
   return (
-    <li className="activity">
-      <div className="time">{time}</div>
-
-    </li>
+    <tr className="activity">
+    <td className="time">{time}</td>
+    <td className="description">{description}</td>
+  </tr>
   );
 }
 

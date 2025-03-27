@@ -13,10 +13,16 @@ TIP: Use the map higher order function:
 function ActivityList({ activities = [] }) {
   if (activities && activities.length) {
     return ( 
-      activities.map((description, time) => (
-        
-        <Activity key={time} {...description} />
-     )))};
+      <div className="activity-list">
+      <h4>Daily Activities</h4>
+      <ul>
+        {activities.map((activity, index) => (
+          <Activity key={index} time={activity.time} description={activity.description} />
+        ))}
+      </ul>
+    </div>
+          );
+        }
   return null;
 }
 
