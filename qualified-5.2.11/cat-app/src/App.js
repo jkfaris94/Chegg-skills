@@ -27,7 +27,7 @@ function App() {
   return (
     <div className="App">
       <Header name={name} birthday={birthday} imageSrc={imageSrc} />
-
+      <HobbyList hobbies={hobbies} />
       
       
     </div>
