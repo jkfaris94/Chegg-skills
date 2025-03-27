@@ -12,12 +12,11 @@ TIP: Use the map higher order function:
 
 function ActivityList({ activities = [] }) {
   if (activities && activities.length) {
-    return (
-      <ul className="activity-list">
-
-      </ul>
-    );
-  }
+    return ( 
+      activities.map((description, time) => (
+        
+        <Activity key={time} {...description} />
+     )))};
   return null;
 }
 

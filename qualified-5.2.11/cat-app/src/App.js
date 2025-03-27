@@ -28,7 +28,7 @@ function App() {
     <div className="App">
       <Header name={name} birthday={birthday} imageSrc={imageSrc} />
       <HobbyList hobbies={hobbies} />
-      
+      <ActivityList dailyActivities={dailyActivities} />
       
     </div>
   );
