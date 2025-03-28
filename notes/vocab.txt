@@ -35,3 +35,4 @@ State: Data that affects how an application behaves and is rendered.
 Hook: A special React function that gives you access to some React process.
 One-way data flow: Also called one-way binding, the idea that changes in the props or state will cascade downward to cause changes further on.
 Integration tests: Automated tests that check if the individual components of a React application work properly when combined.
+Race condition: Also called a race hazard, a condition where a program depends on the relative timing of one or more processes to function correctly.
