@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
       <button
         onClick={() => {
           setSubscribed(!subscribed);
-          setSubscribedCount(subscribedCount + 1);
+          setSubscribedCount((currentCount) => currentCount + 1);
+          setSubscribedCount((currentCount) => currentCount + 1);
           if (!alerts) setAlerts(true);
         }}
       >
