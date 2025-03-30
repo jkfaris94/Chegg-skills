@@ -1,7 +1,6 @@
-function Header() {
-    // TODO: define loggedIn
+function Header( {loggedIn, handleLoggedInClick }) {
     return (
-      <button onClick={TODO}>{loggedIn ? "Log Out" : "Log In"}</button>
+      <button onClick={handleLoggedInClick}>{loggedIn ? "Log Out" : "Log In"}</button>
     );
   }
   
