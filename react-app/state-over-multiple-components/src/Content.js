@@ -1,15 +1,12 @@
-import React from 'react';
-// function Content({ loggedIn }) {
-//     return loggedIn && <p>Your Gay</p>;
-//   }
+import React from "react";
 
-function Content({ fontSize }) {
-  return (
-    <div style={{ fontSize: `${fontSize}px` }}>
-      <p>This is the content area. The font size can change!</p>
+function Content({ loggedIn, fontSize }) {
+  return ( loggedIn && (
+    <div>
+      <p style={{ fontSize: `${fontSize}px` }}>CONTENT</p>
     </div>
+    )
   );
 }
 
-
-  export default Content;
+export default Content;
