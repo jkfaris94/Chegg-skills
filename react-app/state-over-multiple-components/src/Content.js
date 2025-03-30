@@ -1,4 +1,4 @@
-function Content() {
+function Content({ loggedIn }) {
     return loggedIn && <p>CONTENT</p>;
   }
 
