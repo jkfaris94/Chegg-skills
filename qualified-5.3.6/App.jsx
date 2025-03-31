@@ -3,7 +3,7 @@ import ClickTimes from "./ClickTimes";
 import TimestampsDisplay from "./TimestampsDisplay";
 
 function App() {
-  const timestamps = [timestamp, setTimestamps] = useState([]);
+  const [timestamps, setTimestamps] = useState([]);
 
   const handleClick = () => {
     setTimestamps([...timestamps, Date.now()]);
