@@ -7,7 +7,13 @@ function SubscriberForm() {
       <form>
         <label htmlFor="name">
           Enter Your Name:
-          <input type="text" id="name" name="name" />
+          <input
+          id="name"
+          type="text"
+          name="name"
+          onChange={handleNameChange}
+          value={name}
+        />
         </label>
         <label htmlFor="email">
           Your Email:
