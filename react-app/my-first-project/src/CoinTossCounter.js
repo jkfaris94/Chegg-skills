@@ -2,7 +2,15 @@ import React, { useState } from "react";
 
 function CoinTossCounter() {
     const [results, setResults] = useState([]);
-    const handleClick = (value) => setResults([...results, value]);
+    const [counts, setCounts] = useState({ H: 0, T: 0 });
+    const handleClick = (value) => {
+      setResults([...results, value]);
+      setCounts({
+        ...counts,
+        [value]: counts[value] + 1,
+      });
+    };
+
 
     const lis = results.map((result, index) => (
         <li key={`toss-${index}`}>{result === "H" ? "Heads" : "Tails"}</li>
@@ -14,7 +22,7 @@ function CoinTossCounter() {
       );
       setResults(filteredList);
     };
-    
+
     return (
       <section>
         <div>
