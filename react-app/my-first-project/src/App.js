@@ -1,5 +1,6 @@
 import "./App.css";
 import WelcomeBack from "./WelcomeBack";
+import CoinTossCounter from "./CoinTossCounter";
 
 
 function EncouragingWords() {
@@ -16,6 +17,7 @@ function App() {
       <WelcomeBack />
       <EncouragingWords />
       <DailyTip />
+      <CoinTossCounter />
     </>
   );
 }
