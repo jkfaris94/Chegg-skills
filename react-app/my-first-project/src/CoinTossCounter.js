@@ -15,12 +15,17 @@ function CoinTossCounter() {
     const lis = results.map((result, index) => (
         <li key={`toss-${index}`}>{result === "H" ? "Heads" : "Tails"}</li>
     ));
-
     const handleDeleteLast = () => {
-      const filteredList = results.filter(
-        (result, index) => index !== results.length - 1
-      );
-      setResults(filteredList);
+      const last = results[results.length - 1];
+      const list = results.slice(0, -1);
+    
+      setResults(list);
+      if (last) {
+        setCounts({
+          ...counts,
+          [last]: counts[last] - 1,
+        });
+      }
     };
 
     return (
