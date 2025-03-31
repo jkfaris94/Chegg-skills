@@ -29,6 +29,10 @@ function CoinTossCounter() {
           <button onClick={() => handleClick("H")}>Heads</button>
           <button onClick={() => handleClick("T")}>Tails</button>
           <button onClick={handleDeleteLast}>Delete Last</button>
+          <ul>
+            <li>Heads: {counts["H"]}</li>
+            <li>Tails: {counts["T"]}</li>
+          </ul>
         </div>
         <ul>{lis}</ul>
       </section>
