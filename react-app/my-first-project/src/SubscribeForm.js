@@ -29,6 +29,8 @@ function SubscriberForm() {
           onChange={handleEmailChange}
           value={email}
         />
+        <p><strong>Name:</strong> {name}</p>
+        <p><strong>Email:</strong> {email}</p>
         </label>
       </form>
     );
