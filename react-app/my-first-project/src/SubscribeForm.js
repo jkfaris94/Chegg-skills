@@ -8,8 +8,17 @@ function SubscriberForm() {
 
     console.log("Current value of name:", name);
     console.log("Current value of email:", email);
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        console.log("Submitted:", name, email);
+
+        setName("");
+        setEmail("");
+      };
+
     return (
-      <form>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="name">
           Enter Your Name:
           <input
@@ -32,6 +41,7 @@ function SubscriberForm() {
         <p><strong>Name:</strong> {name}</p>
         <p><strong>Email:</strong> {email}</p>
         </label>
+        <button type="submit">Submit</button>
       </form>
     );
   }
