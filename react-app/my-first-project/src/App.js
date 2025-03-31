@@ -4,6 +4,7 @@ import CoinTossCounter from "./CoinTossCounter";
 import React, { useState } from "react";
 import ClickTimes from "./ClickTimes";
 import TimestampsDisplay from "./TimestampsDisplay";
+import SubscribeForm from "./SubscribeForm";
 
 
 function EncouragingWords() {
@@ -29,6 +30,7 @@ function App() {
       <CoinTossCounter />
       <ClickTimes onClick={handleClick} />
       <TimestampsDisplay timestamps={timestamps} />
+      <SubscribeForm />
     </>
   );
 }
