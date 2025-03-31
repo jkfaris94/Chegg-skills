@@ -1,4 +1,8 @@
 function SubscriberForm() {
+    const [name, setName] = useState("");
+    const handleNameChange = (event) => setName(event.target.value);
+
+    console.log("Current value of name:", name);
     return (
       <form>
         <label htmlFor="name">
