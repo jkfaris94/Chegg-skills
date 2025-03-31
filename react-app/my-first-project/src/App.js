@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import ClickTimes from "./ClickTimes";
 import TimestampsDisplay from "./TimestampsDisplay";
 import SubscribeForm from "./SubscribeForm";
+import SubscriberList from "./SubscriberList"
 
 
 function EncouragingWords() {
@@ -22,6 +23,19 @@ function App() {
     setTimestamps([...timestamps, Date.now()]);
   };
 
+  const [subscribers, setSubscribers] = useState([]);
+
+  const createSubscriber = (newSubscriber) =>
+    setSubscribers((currentSubscribers) => [
+      newSubscriber,
+      ...currentSubscribers,
+    ]);
+
+  const deleteSubscriber = (indexToDelete) =>
+    setSubscribers((currentSubscribers) =>
+      currentSubscribers.filter((post, index) => index !== indexToDelete)
+    );
+
   return (
     <>
       <WelcomeBack />
@@ -30,7 +44,11 @@ function App() {
       <CoinTossCounter />
       <ClickTimes onClick={handleClick} />
       <TimestampsDisplay timestamps={timestamps} />
-      <SubscribeForm />
+      <SubscribeForm createSubscriber={createSubscriber} />
+      <SubscriberList
+        subscribers={subscribers}
+        deleteSubscriber={deleteSubscriber}
+      />
     </>
   );
 }
