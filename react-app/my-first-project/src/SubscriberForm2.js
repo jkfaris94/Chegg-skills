@@ -95,6 +95,19 @@ function SubscriberForm() {
               checked={formData.age === "high"}
             />
           </label>
+          <br />
+          <label htmlFor="subscription">
+            Receive email notifications?
+            <input
+              id="subscription"
+              type="checkbox"
+              name="subscription"
+              onChange={handleChange}
+              checked={formData.subscription}
+              value="subscription"
+            />
+          </label>
+          <br />
         </fieldset>
         <button type="submit">Submit</button>
       </form>
