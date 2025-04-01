@@ -6,6 +6,7 @@ function SubscriberForm() {
       email: "",
       referral: "twitter",
       age: "",
+      subscription: true,
     };
     const [formData, setFormData] = useState({ ...initialFormState });
     const handleChange = ({ target }) => {
