@@ -5,6 +5,7 @@ function SubscriberForm() {
       name: "johnny",
       email: "",
       referral: "twitter",
+      age: "",
     };
     const [formData, setFormData] = useState({ ...initialFormState });
     const handleChange = ({ target }) => {
@@ -81,6 +82,17 @@ function SubscriberForm() {
               onChange={handleChange}
               value="middle"
               checked={formData.age === "middle"}
+            />
+          </label>
+          <label htmlFor="high">
+            61+
+            <input
+              id="high"
+              type="radio"
+              name="age"
+              onChange={handleChange}
+              value="high"
+              checked={formData.age === "high"}
             />
           </label>
         </fieldset>
