@@ -9,9 +9,10 @@ function SubscriberForm() {
     };
     const [formData, setFormData] = useState({ ...initialFormState });
     const handleChange = ({ target }) => {
+      const value = target.type === "checkbox" ? target.checked : target.value;
       setFormData({
         ...formData,
-        [target.name]: target.value,
+        [target.name]: value,
       });
     };
   
