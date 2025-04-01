@@ -49,6 +49,7 @@ function App() {
         subscribers={subscribers}
         deleteSubscriber={deleteSubscriber}
       />
+      <SubscriberForm />
     </>
   );
 }
