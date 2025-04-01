@@ -1,0 +1,22 @@
+React state management: Complex forms
+Instructions
+Build the RSVPForm component in RSVPForm.jsx to be a form with the following fields, in this order:
+
+Name input field.
+Dropdown with the following age ranges: Prefer not to say, 0-19, 20-39, 40-59, 60+.
+New Member checkbox, set to unchecked by default.
+Comment input field.
+Submit button.
+Upon submission, log each value together, in a single statement, to the console, and clear the fields in the form.
+
+Example
+For example, imagine the following is inputted into the form:
+
+Name: John
+Age: 60+
+New Member: checked
+Comment: left empty
+The following should be what is logged to the console.
+
+"John", "60+", true, ""
+Note: Remember that you can log multiple items by passing multiple arguments into a console.log() statement, such as console.log("John", "60+").
