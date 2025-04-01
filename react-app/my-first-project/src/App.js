@@ -6,6 +6,7 @@ import ClickTimes from "./ClickTimes";
 import TimestampsDisplay from "./TimestampsDisplay";
 import SubscribeForm from "./SubscribeForm";
 import SubscriberList from "./SubscriberList"
+import SubscriberForm2 from "./SubscriberForm2";
 
 
 function EncouragingWords() {
@@ -49,7 +50,7 @@ function App() {
         subscribers={subscribers}
         deleteSubscriber={deleteSubscriber}
       />
-      <SubscriberForm />
+      <SubscriberForm2 />
     </>
   );
 }
