@@ -1,0 +1,15 @@
+
+React state management: Forms with input fields
+Note: If downloading the assessment files to your local machine, make sure you're running Node v18 before you run npm install.
+
+Check which version you are running: node -v
+If needed, change the version to v18: nvm use v18
+For additional help, review the "Learn your tools: Visual Studio Code" lesson in the "Welcome" module.
+
+Instructions
+Write a component DogForm in DogForm.js. It should have a form with three input fields: name, breed, age, in that order. The input fields should all take strings. There should be a submission button. After submission, log the values to the console and clear the input fields.
+
+Here is what the logs to the console might look like:
+
+"Rufus" "pit bull" "2"
+"Bingo" "terrier" "5"
