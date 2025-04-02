@@ -8,6 +8,7 @@ function PostItem({ post, onDelete }) {
       ) : (
         <img src={post.content} alt="Post" style={{ maxWidth: "300px" }} />
       )}
+      <br />
       <button name="delete" onClick={onDelete}>Delete</button>
     </li>
   );

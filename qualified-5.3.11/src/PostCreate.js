@@ -52,6 +52,7 @@ function PostCreate({ createPost }) {
             <input id="content" name="content" type="url" required={true} onChange={handleContentChange} />
           )}
         </div>
+        <br />
         <div>
           <button type="submit" data-testid="formSubmit">Submit</button>
         </div>
