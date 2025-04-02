@@ -5,9 +5,21 @@ import React, { useState } from "react";
  *
  * When the form is submitted, a new post is created and the form contents cleared.
  */
-function PostCreate() {
-  const [type, setType] = useState("Text");
+function PostCreate({ createPost }) {
+  const [type, setType] = useState("text");
+  const [content, setContent] = useState("");
 
+  const handleTypeChange = (event) => setType(event.target.value);
+  const handleContentChange = (event) => setContent(event.target.value);
+
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    createPost({ type, content });
+    setType("text");
+    setContent("");
+    console.log({type, content})
+  }
   // TODO: When the form is submitted, a new post should be created, and the form contents cleared.
 
   // For the tests to pass, the form below must have:
@@ -17,22 +29,27 @@ function PostCreate() {
   // - one child `<textarea>` or `<input>` (not both at the same time) with a `name="content"`
 
   return (
-    <form name="create">
+    <form name="create" onSubmit={handleSubmit}>
       <fieldset>
         <legend>Create</legend>
         <div>
           <label htmlFor="type">Type: </label>
-          <select id="type" name="type" required={true}>
-            <option>Text</option>
-            <option>Image</option>
+          <select 
+            id="type" 
+            name="type" 
+            required={true} 
+            onChange={handleTypeChange}
+            >
+            <option value="text" >Text</option>
+            <option value="image" >Image</option>
           </select>
         </div>
         <div>
           <label htmlFor="content">Content: </label>
-          {type === "Text" ? (
-            <textarea id="content" name="content" required={true} rows={3} />
+          {type === "text" ? (
+            <textarea id="content" name="content" required={true} rows={3} onChange={handleContentChange}/>
           ) : (
-            <input id="content" name="content" type="url" required={true} />
+            <input id="content" name="content" type="url" required={true} onChange={handleContentChange} />
           )}
         </div>
         <div>
