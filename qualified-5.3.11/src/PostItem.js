@@ -2,7 +2,7 @@ import React from "react";
 
 function PostItem({ post, onDelete }) {
   return (
-    <li className="post">
+    <div className="post">
       {post.type === "text" ? (
         <p>{post.content}</p>
       ) : (
@@ -10,7 +10,7 @@ function PostItem({ post, onDelete }) {
       )}
       <br />
       <button name="delete" onClick={onDelete}>Delete</button>
-    </li>
+    </div>
   );
 }
 
