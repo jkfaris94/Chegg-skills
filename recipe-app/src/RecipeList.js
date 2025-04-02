@@ -22,7 +22,7 @@ function RecipeList() {
     <section className="mt-3">
       <table className="table table-striped caption-top mb-0">
         <caption>
-          0 recipes listed.
+          {RecipeData.length} recipes listed.
         </caption>
         <thead>
           <tr className="text-center">
