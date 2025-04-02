@@ -37,6 +37,7 @@ function PostCreate({ createPost }) {
           <select 
             id="type" 
             name="type" 
+            value={content}
             required={true} 
             onChange={handleTypeChange}
             >
@@ -47,9 +48,9 @@ function PostCreate({ createPost }) {
         <div>
           <label htmlFor="content">Content: </label>
           {type === "text" ? (
-            <textarea id="content" name="content" required={true} rows={3} onChange={handleContentChange}/>
+            <textarea id="content" name="content" required={true} value={content} rows={3} onChange={handleContentChange}/>
           ) : (
-            <input id="content" name="content" type="url" required={true} onChange={handleContentChange} />
+            <input id="content" name="content" type="url" required={true} value={content} onChange={handleContentChange} />
           )}
         </div>
         <br />
