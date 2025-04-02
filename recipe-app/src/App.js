@@ -12,7 +12,7 @@ function App() {
       <header className="bg-primary bg-gradient text-white rounded-bottom">
         <h1 className="text-center py-5 display-5">Delicious Food Recipes</h1>
       </header>
-      <RecipeList />
+      <RecipeList recipes={recipes}/>
       <RecipeCreate />
     </main>
   );

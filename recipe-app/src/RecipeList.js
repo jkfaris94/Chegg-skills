@@ -1,7 +1,19 @@
 import React from "react";
+import RecipeData from "./data";
+
 
 function RecipeList() {
-  
+  const rows = RecipeData.map(({ name, cuisine, photo, ingredients, preparation, actions}, index) => (
+    <tr key={index}>
+      <td>{name}</td>
+      <td>{cuisine}</td>
+      <td><img src={photo} alt={name} style={{ width: "100px" }} /></td>
+      <td>{ingredients}</td>
+      <td>{preparation}</td>
+      <td>{actions}</td>
+    </tr>
+  ))
+
   // TODO: Display the list of recipes using the structure of table that is provided.
   // TODO: Create at least one additional component that is used by this component.
   // TODO: Each recipe row must have a delete button - <button name="delete">Delete</button> - that deletes the post when clicked.
@@ -23,6 +35,7 @@ function RecipeList() {
           </tr>
         </thead>
         <tbody>
+          {rows}
           <tr>
             <td colSpan="6">No recipes listed. Create one now!</td>
           </tr>
