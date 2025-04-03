@@ -73,7 +73,14 @@ function setDelay(difficulty) {
 function chooseHole(holes) {
   // TODO: Write your code here.
   const index = randomInteger(0, holes.length -1);
-  return holes[index];
+  const hole = holes[index];
+
+    if (hole === lastHole) {
+      return chooseHole(holes);
+    }
+  
+  lastHole = hole;
+  return hole;
 }
 
 /**
