@@ -87,8 +87,8 @@ function RecipeCreate({ createRecipe }) {
           >
           </textarea>
         </label>
-        <div className="col auto">
-          <button type="submit" class="form-control">Create</button>
+        <div className="col d-grid gap-2">
+          <button type="submit" class="btn btn-outline-primary btn-lg">Create</button>
         </div>
       </div>
     </form>
