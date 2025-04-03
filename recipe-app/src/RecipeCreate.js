@@ -30,7 +30,7 @@ function RecipeCreate() {
   return (
     <section>
       <h2>Add a new Recipe</h2>
-      <form onSubmit={handleSubmit}>
+      <form name="create" onSubmit={handleSubmit}>
       <label htmlFor="name">   
         <input 
           id="name"
