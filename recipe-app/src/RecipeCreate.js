@@ -45,7 +45,7 @@ function RecipeCreate({ createRecipe }) {
             id="name"
             type="text"
             name="cuisine"
-            placeholder="cuisine"
+            placeholder="Cuisine"
             class="form-control"
             onChange={handleChange}
             value={formData.cuisine}
