@@ -48,9 +48,10 @@ function setDelay(difficulty) {
   } else if (difficulty === "normal") { 
     delay = 1000;
   } else if (difficulty === "hard") {
-    delay = 856;
+    delay = randomInteger(600, 1200);
   } else {
-    console.log("Select difficulty")
+    console.log("Select difficulty");
+    delay = 1000;
   } 
   return delay;
 }
