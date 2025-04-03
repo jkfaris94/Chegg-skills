@@ -26,15 +26,6 @@ function RecipeList({ recipes, deleteRecipe }) {
           {recipes.length} recipes listed.
         </caption>
         <thead>
-          {/* <ul>
-            {recipes.map((recipe, index) => (
-              <RecipeView 
-                deleteRecipe={() => deleteRecipe(index)}
-                key={index}
-                recipe={recipe}
-                />
-            ))}
-          </ul> */}
           <tr className="text-center">
             <th>Name</th>
             <th>Cuisine</th>
