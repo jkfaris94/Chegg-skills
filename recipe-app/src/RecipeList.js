@@ -1,7 +1,7 @@
 import React from "react";
 
 function RecipeList({ recipes, deleteRecipe }) {
-  const rows = recipes.map(({ name, cuisine, photo, ingredients, preparation, actions}, index) => (
+  const rows = recipes.map(({ name, cuisine, photo, ingredients, preparation }, index) => (
     <tr key={index}>
       <td>{name}</td>
       <td>{cuisine}</td>
