@@ -1,5 +1,4 @@
 import React from "react";
-import RecipeData from "./data";
 
 
 function RecipeList({ recipes, deleteRecipe }) {
