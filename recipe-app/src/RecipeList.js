@@ -9,7 +9,7 @@ function RecipeList({ recipes, deleteRecipe }) {
       <td>{ingredients}</td>
       <td>{preparation}</td>
       <td>
-      <button name="delete" class="btn btn-outline-danger" onClick={() => deleteRecipe(index)}>Delete</button>
+      <button name="delete" class="btn btn-outline-danger" onClick={() => deleteRecipe(index)}>Delete Recipe</button>
       </td>
     </tr>
   ))
