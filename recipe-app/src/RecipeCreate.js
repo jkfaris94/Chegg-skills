@@ -23,10 +23,6 @@ function RecipeCreate({ createRecipe }) {
     setFormData({ ...initialFormState });
   };
 
-  // TODO: When the form is submitted, a new recipe should be created, and the form contents cleared.
-  // TODO: Add the required input and textarea form elements.
-  // TODO: Add the required submit and change handlers.
-  
   return (
     <section>
       <h2>Add a new Recipe</h2>
