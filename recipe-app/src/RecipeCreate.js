@@ -65,25 +65,27 @@ function RecipeCreate() {
       </label>
       <br />
       <label htmlFor="ingredients">
-        <input 
+        <textarea 
           id="ingredients"
           type="text"
           name="ingredients"
           placeholder="Ingredients"
           onChange={handleChange}
           value={formData.ingredients}
-        />
+        >
+        </textarea>
       </label>
       <br />
       <label htmlFor="preparation">
-        <input 
+        <textarea 
           id="preparation"
           type="text"
           name="preparation"
           placeholder="Preparation"
           onChange={handleChange}
           value={formData.preparation}
-        />
+        >
+        </textarea>
       </label>
       <br />
       <button type="submit">Create</button>
