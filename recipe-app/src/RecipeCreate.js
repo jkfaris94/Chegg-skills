@@ -9,7 +9,7 @@ function RecipeCreate() {
     preparation: "",
   }
 
-  Const [formData, setFormData] = useState({ ...initialFormState });
+  const [formData, setFormData] = useState({ ...initialFormState });
   const handleChange = ({ target }) => {
     setFormData({
     ...formData,
