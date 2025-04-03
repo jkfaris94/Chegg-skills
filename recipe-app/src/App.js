@@ -7,16 +7,18 @@ import recipeData from "./data";
 function App() {
   const [recipes, setRecipes] = useState(recipeData);
 
-  const createRecipe = (newRecipe) => 
+  const createRecipe = (newRecipe) => {
+    console.log("Adding recipe:", newRecipe);
     setRecipes((currentRecipes) => [
       newRecipe,
       ...currentRecipes,
     ]);
+  };
 
-    const deleteRecipe = (indexToDelete) => 
-      setRecipes((currentRecipes) => 
-        currentRecipes.filter((post, index) => !== indexToDelete)
-      );
+const deleteRecipe = (indexToDelete) =>
+  setRecipes((currentRecipes) =>
+    currentRecipes.filter((recipe, index) => index !== indexToDelete)
+  );
 
   return (
     <main className="container">

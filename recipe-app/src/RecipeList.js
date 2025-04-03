@@ -2,15 +2,17 @@ import React from "react";
 import RecipeData from "./data";
 
 
-function RecipeList({recipes, deleteRecipe}) {
-  const rows = RecipeData.map(({ name, cuisine, photo, ingredients, preparation, actions}, index) => (
+function RecipeList({ recipes, deleteRecipe }) {
+  const rows = recipes.map(({ name, cuisine, photo, ingredients, preparation, actions}, index) => (
     <tr key={index}>
       <td>{name}</td>
       <td>{cuisine}</td>
       <td><img src={photo} alt={name} style={{ width: "100px" }} /></td>
       <td>{ingredients}</td>
       <td>{preparation}</td>
-      <td>{actions}</td>
+      <td>
+      <button name="delete" onClick={() => deleteRecipe(index)}>Delete</button>
+      </td>
     </tr>
   ))
 
@@ -22,18 +24,18 @@ function RecipeList({recipes, deleteRecipe}) {
     <section className="mt-3">
       <table className="table table-striped caption-top mb-0">
         <caption>
-          {RecipeData.length} recipes listed.
+          {recipes.length} recipes listed.
         </caption>
         <thead>
-          <ul>
+          {/* <ul>
             {recipes.map((recipe, index) => (
-              <recipeView 
+              <RecipeView 
                 deleteRecipe={() => deleteRecipe(index)}
                 key={index}
                 recipe={recipe}
                 />
             ))}
-          </ul>
+          </ul> */}
           <tr className="text-center">
             <th>Name</th>
             <th>Cuisine</th>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function RecipeCreate() {
+function RecipeCreate({ createRecipe }) {
   const initialFormState = {
     name: "",
     cuisine: "",
@@ -19,7 +19,7 @@ function RecipeCreate() {
 
   const handleSubmit = (event) => {
     event.preventDefault(); 
-    console.log("Submitted:", formData);
+    createRecipe(formData);
     setFormData({ ...initialFormState });
   };
 
