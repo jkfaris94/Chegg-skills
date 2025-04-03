@@ -41,7 +41,18 @@ const hole = randomInteger(0, 8);
  */
 function setDelay(difficulty) {
   // TODO: Write your code here.
-  
+  let delay;
+
+  if (difficulty === "easy") {
+    delay = 1500;
+  } else if (difficulty === "normal") { 
+    delay = 1000;
+  } else if (difficulty === "hard") {
+    delay = 856;
+  } else {
+    console.log("Select difficulty")
+  } 
+  return delay;
 }
 
 /**
