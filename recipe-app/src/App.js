@@ -10,8 +10,8 @@ function App() {
   const createRecipe = (newRecipe) => {
     console.log("Adding recipe:", newRecipe);
     setRecipes((currentRecipes) => [
-      newRecipe,
       ...currentRecipes,
+      newRecipe,
     ]);
   };
 
