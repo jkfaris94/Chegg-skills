@@ -17,6 +17,12 @@ function RecipeCreate() {
     });
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault(); 
+    console.log("Submitted:", FormData);
+    setFormData({ ...initialFormState });
+  };
+
   // TODO: When the form is submitted, a new recipe should be created, and the form contents cleared.
   // TODO: Add the required input and textarea form elements.
   // TODO: Add the required submit and change handlers.
