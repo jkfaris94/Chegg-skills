@@ -28,7 +28,9 @@ function RecipeCreate() {
   // TODO: Add the required submit and change handlers.
   
   return (
-    <form onSubmit={handleSubmit}>
+    <section>
+      <h2>Add a new Recipe</h2>
+      <form onSubmit={handleSubmit}>
       <label htmlFor="name">   
         <input 
           id="name"
@@ -86,6 +88,7 @@ function RecipeCreate() {
       <br />
       <button type="submit">Create</button>
     </form>
+    </section>
   );
 }
 
