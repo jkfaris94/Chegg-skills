@@ -31,10 +31,13 @@ function RecipeList({ recipes, deleteRecipe }) {
           </tr>
         </thead>
         <tbody>
-          {rows}
-          <tr>
-            <td colSpan="6">No recipes listed. Create one now!</td>
-          </tr>
+          {recipes.length > 0 ? (
+            rows
+          ) : (
+            <tr>
+              <td colSpan="6" className="text-center">No recipes listed. Create one now!</td>
+            </tr>
+          )}
         </tbody>
       </table>
     </section>
