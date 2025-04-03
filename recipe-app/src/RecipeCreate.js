@@ -42,7 +42,7 @@ function RecipeCreate({ createRecipe }) {
         </label>
         <label htmlFor="cuisine" className="col">
           <input 
-            id="name"
+            id="cuisine"
             type="text"
             name="cuisine"
             placeholder="Cuisine"
