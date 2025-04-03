@@ -25,8 +25,9 @@ function RecipeCreate({ createRecipe }) {
 
   return (
     <section className="mt-3">
+      
+      <form name="create" onSubmit={handleSubmit}  className="container p-4 border rounded bg-light">
       <h2>Add a new Recipe</h2>
-      <form name="create" onSubmit={handleSubmit}  className="container text-center">
       <div className="row">
         <label htmlFor="name" className="col">   
           <input 
