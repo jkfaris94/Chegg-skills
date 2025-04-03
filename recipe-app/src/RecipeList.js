@@ -2,7 +2,7 @@ import React from "react";
 import RecipeData from "./data";
 
 
-function RecipeList() {
+function RecipeList({recipes, deleteRecipe}) {
   const rows = RecipeData.map(({ name, cuisine, photo, ingredients, preparation, actions}, index) => (
     <tr key={index}>
       <td>{name}</td>
@@ -25,6 +25,15 @@ function RecipeList() {
           {RecipeData.length} recipes listed.
         </caption>
         <thead>
+          <ul>
+            {recipes.map((recipe, index) => (
+              <recipeView 
+                deleteRecipe={() => deleteRecipe(index)}
+                key={index}
+                recipe={recipe}
+                />
+            ))}
+          </ul>
           <tr className="text-center">
             <th>Name</th>
             <th>Cuisine</th>

@@ -16,7 +16,7 @@ function App() {
     const deleteRecipe = (indexToDelete) => 
       setRecipes((currentRecipes) => 
         currentRecipes.filter((post, index) => !== indexToDelete)
-      )
+      );
 
   return (
     <main className="container">
