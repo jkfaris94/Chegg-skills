@@ -72,7 +72,7 @@ function setDelay(difficulty) {
  */
 function chooseHole(holes) {
   // TODO: Write your code here.
-  const index = randomInteger(0, holes.length -1);
+  const index = randomInteger(0, 8 -1);
   const hole = holes[index];
 
     if (hole === lastHole) {
@@ -105,12 +105,13 @@ function chooseHole(holes) {
 */
 function gameOver() {
   // TODO: Write your code here
-  if time > 0:
-    timeoutId = showUp()
-    return timeoutId
-  else
-    gameStopped = stopGame()
-    return gameStopped
+  if (time > 0) {
+    const timeoutId = showUp();
+    return timeoutId;
+  } else {
+    const gameStopped = stopGame();
+    return gameStopped;
+  }
 }
 
 /**
