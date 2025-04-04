@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", () => {
+
 const holes = document.querySelectorAll('.hole');
 const moles = document.querySelectorAll('.mole');
 const startButton = document.querySelector('#start');
@@ -72,11 +74,11 @@ function setDelay(difficulty) {
  */
 function chooseHole(holes) {
   // TODO: Write your code here.
-  const index = randomInteger(0, 8 -1);
+  const index = randomInteger(0, holes.length -1);
   const hole = holes[index];
 
     if (hole === lastHole) {
-      return chooseHole();
+      return chooseHole(holes);
     }
   
   lastHole = hole;
@@ -124,8 +126,11 @@ function gameOver() {
 *
 */
 function showUp() {
-  let delay = setDelay(delay); 
-  const hole = chooseHole(hole);  
+  const delay = setDelay(delay); 
+  const hole = chooseHole(holes);  
+
+  if (!hole) return;
+
   return showAndHide(hole, delay);
 }
 
@@ -324,3 +329,5 @@ window.time = time;
 window.setDuration = setDuration;
 window.toggleVisibility = toggleVisibility;
 window.setEventListeners = setEventListeners;
+
+});
