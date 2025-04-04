@@ -76,7 +76,7 @@ function chooseHole(holes) {
   const hole = holes[index];
 
     if (hole === lastHole) {
-      return chooseHole(holes);
+      return chooseHole();
     }
   
   lastHole = hole;
@@ -124,8 +124,8 @@ function gameOver() {
 *
 */
 function showUp() {
-  let delay = setDelay(delay); // TODO: Update so that it uses setDelay()
-  const hole = chooseHole(hole);  // TODO: Update so that it use chooseHole()
+  let delay = setDelay(delay); 
+  const hole = chooseHole(hole);  
   return showAndHide(hole, delay);
 }
 
@@ -174,6 +174,9 @@ function toggleVisibility(hole){
 */
 function updateScore() {
   // TODO: Write your code here
+  points++;
+  
+  score.textContent = points;
 
   return points;
 }
