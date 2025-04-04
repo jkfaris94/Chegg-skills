@@ -5,6 +5,7 @@ const moles = document.querySelectorAll('.mole');
 const startButton = document.querySelector('#start');
 const score = document.querySelector('#score'); // Used querySelector() to get the score element
 const timerDisplay = document.querySelector('#timer'); // Used querySelector() to get the timer element.
+const difficultySelect = document.querySelector('#difficulty-select'); //added for ability to select difficulty
 
 let time = 0;
 let timer;
@@ -208,6 +209,7 @@ function startGame(){
   setEventListeners();
   startTimer();
   showUp();
+  difficulty = difficultySelect.value; //added for ability to select difficulty
   return "game started";
 }
 
