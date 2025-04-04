@@ -8,16 +8,9 @@
       <div>
         <h2 id="title">Click <button id="start">start</button>to play!</h2>
       </div>
-      <label for="difficulty-select"><span>Difficulty:</span></label>
-      <select id="difficulty-select">
-        <option value="easy">Easy</option>
-        <option value="normal">Normal</option>
-        <option value="hard" selected>Hard</option>
-      </select>
       <div>
         <h2>score: <span id="score">0</span></h2>
       </div>
-      <div>
           <h2><span id="timer">0</span> seconds left.</h2>
       </div>
     </div>
@@ -49,6 +42,14 @@
       <div id="hole8" class="hole">
         <div id="mole8" class="mole"></div>
       </div>
+    </div>
+    <div class="difficulty-container">
+      <label for="difficulty-select"><span>Difficulty:</span></label>
+      <select id="difficulty-select">
+        <option value="easy">Easy</option>
+        <option value="normal">Normal</option>
+        <option value="hard" selected>Hard</option>
+      </select>
     </div>
     <script src="./src/index.js"></script>
   </body>
