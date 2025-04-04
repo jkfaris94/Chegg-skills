@@ -203,9 +203,11 @@ function clearScore() {
 function updateTimer() {
   // TODO: Write your code here.
   // hint: this code is provided to you in the instructions.
-  if (time > 0){
+  if (time > 0) {
     time -= 1;
     timerDisplay.textContent = time;
+  } else {
+    clearInterval(timer); 
   }
   
   return time;
