@@ -7,6 +7,7 @@ const score = document.querySelector('#score'); // Used querySelector() to get t
 const timerDisplay = document.querySelector('#timer'); // Used querySelector() to get the timer element.
 const difficultySelect = document.querySelector('#difficulty-select'); //added for ability to select difficulty
 
+localStorage.removeItem("whackHighScore"); //resets the highscore on page refresh 
 
 let time = 0;
 let timer;
