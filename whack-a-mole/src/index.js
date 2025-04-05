@@ -7,6 +7,7 @@ const score = document.querySelector('#score'); // Used querySelector() to get t
 const timerDisplay = document.querySelector('#timer'); // Used querySelector() to get the timer element.
 const difficultySelect = document.querySelector('#difficulty-select'); //added for ability to select difficulty
 
+
 let time = 0;
 let timer;
 let lastHole = 0;
@@ -119,6 +120,14 @@ function toggleVisibility(hole){
 function updateScore() {
   points++;
   score.textContent = points;
+
+  //added code for highscore   
+  if (points > highScore) {
+    highScore = points;
+    localStorage.setItem("whackHighScore", highScore);
+    document.getElementById("high-score").textContent = highScore;
+  }
+
   return points;
 }
 
@@ -212,6 +221,9 @@ function startGame(){
   difficulty = difficultySelect.value; //added for ability to select difficulty
   return "game started";
 }
+
+let highScore = localStorage.getItem("whackHighScore") || 0;
+document.getElementById("high-score").textContent = highScore;
 
 startButton.addEventListener("click", startGame);
 
