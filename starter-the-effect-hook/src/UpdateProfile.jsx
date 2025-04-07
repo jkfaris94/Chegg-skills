@@ -1,36 +1,40 @@
 import { useState } from "react";
-
-function CreateProfile({ setUser }) {
-  const [formData, setFormData] = useState({ username: "", email: "" });
-
-  const onSubmit = async (event) => {
-    event.preventDefault();
-    
-    try { 
-      const response = await fetch(
-        "https://jsonplaceholder.typicode.com/users", {
-        method: "POST",
-        body: JSON.stringify(formData),
-        headers: {
-          "Content-type": "application/json;charset=UTF-8",
-        },
-      });
-    
-      const json = await response.json();
-      setUser(json);
-    } catch (error) {
-      console.error("API FAILURE");
-      console.eroor(error);
-    }
-  };
+function UpdateProfile({ user, setUser }) {
+  const [formData, setFormData] = useState({
+    username: user.username,
+    email: user.email,
+  });
 
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
+  const onSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const response = await fetch(
+        `https://jsonplaceholder.typicode.com/users/${user.id}`,
+        {
+          method: "PUT",
+          body: JSON.stringify(formData),
+          headers: {
+            "Content-type": "application/json;charset=UTF-8",
+          },
+        }
+      );
+
+      const json = await response.json();
+      setUser(json);
+    } catch (error) {
+      console.error("API FAILURE");
+      console.error(error);
+    }
+  };
+
   return (
     <>
-      <h2 className="pb-3">Create a profile</h2>
+      <h2 className="pb-3">Update your profile</h2>
       <form name="profileCreate" onSubmit={onSubmit}>
         <section className="mb-3">
           <label htmlFor="username" className="form-label">
@@ -67,4 +71,4 @@ function CreateProfile({ setUser }) {
   );
 }
 
-export default CreateProfile;
+export default UpdateProfile;

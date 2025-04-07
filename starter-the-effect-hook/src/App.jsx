@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import CreateProfile from "./CreateProfile";
+import UpdateProfile from "./UpdateProfile";
 
 function App() {
   const [user, setUser] = useState({ id: null, username: "", email: "" });  
