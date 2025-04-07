@@ -7,7 +7,7 @@ import TimestampsDisplay from "./TimestampsDisplay";
 import SubscribeForm from "./SubscribeForm";
 import SubscriberList from "./SubscriberList"
 import SubscriberForm2 from "./SubscriberForm2";
-
+import ProfileEdit from "./ProfileEdit"
 
 function EncouragingWords() {
   return <p>Believe it</p>;
@@ -35,7 +35,13 @@ function App() {
   const deleteSubscriber = (indexToDelete) =>
     setSubscribers((currentSubscribers) =>
       currentSubscribers.filter((post, index) => index !== indexToDelete)
-    );
+    ); 
+
+    //cleanup example
+    const [userId, setUserID] = useState(1);
+
+    const userIds = [1, 2, 3, 4];
+  
 
   return (
     <>
@@ -51,6 +57,15 @@ function App() {
         deleteSubscriber={deleteSubscriber}
       />
       <SubscriberForm2 />
+      <div className="App">
+        {userIds.map((id) => (
+          <button key={id} onClick={() => setUserID(id)}>
+            User ID {id}
+          </button>
+        ))}
+        <h2>User ID {userId}</h2>
+        <ProfileEdit userID={userId} />
+      </div>
     </>
   );
 }
