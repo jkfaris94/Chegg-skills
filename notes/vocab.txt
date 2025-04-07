@@ -37,4 +37,4 @@ One-way data flow: Also called one-way binding, the idea that changes in the pro
 Integration tests: Automated tests that check if the individual components of a React application work properly when combined.
 Race condition: Also called a race hazard, a condition where a program depends on the relative timing of one or more processes to function correctly.
 Lifting up state: The process of moving state higher up in a component tree, enabling state to be passed from a parent component to multiple children.
-Controlled component: A form element whose value is managed in React state.
+Controlled component: A form element whose value is managed in React state. Re-render: When a part of the page, such as a component, is created from scratch. In React when components re-render, what is presented to the user may change based on the current state or props that the component has access to.
