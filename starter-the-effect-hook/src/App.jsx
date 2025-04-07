@@ -3,7 +3,7 @@ import CreateProfile from "./CreateProfile";
 import UpdateProfile from "./UpdateProfile";
 
 function App() {
-  const [user, setUser] = useState({ id: null, username: "", email: "" });  
+  const [user, setUser] = useState({ id: 1, username: "", email: "" });  
 
   return (
     <>

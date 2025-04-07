@@ -18,6 +18,7 @@ function CreateProfile({ setUser }) {
     
       const json = await response.json();
       setUser(json);
+      console.log(json);
     } catch (error) {
       console.error("API FAILURE");
       console.eroor(error);
