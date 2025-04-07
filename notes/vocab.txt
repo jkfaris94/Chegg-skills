@@ -40,3 +40,5 @@ Lifting up state: The process of moving state higher up in a component tree, ena
 Controlled component: A form element whose value is managed in React state. Re-render: When a part of the page, such as a component, is created from scratch. In React when components re-render, what is presented to the user may change based on the current state or props that the component has access to.
 Side effect: Anything in a function or expression that affects something outside the scope of the function or expression.
 Effect hook: A hook that lets you perform side effects from a React function component.
+Race conditions: When two or more events try to execute at the same time, causing the system to be unstable and vulnerable to an attack.
+Cleanup function: A function that cleans up after previously applied effects to undo an effect for cases like pending API responses.
