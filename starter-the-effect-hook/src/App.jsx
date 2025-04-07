@@ -14,7 +14,7 @@ function App() {
       </header>
       <main className="w-25 mx-auto my-5">
         {user.id ? (
-          <UpdateProfile user={user} setUser={SetUser} />
+          <UpdateProfile user={user} setUser={setUser} />
         ) : (
           <CreateProfile setUser={setUser} />
         )}        
