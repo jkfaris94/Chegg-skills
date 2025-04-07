@@ -5,7 +5,18 @@ function CreateProfile({ setUser }) {
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    console.log(formData);
+    
+    const response = await fetch("https://jsonplaceholder.typicode.com/users", {
+      method: "POST",
+      body: JSON.stringify(formData),
+      headers: {
+        "Content-type": "application/json;charset=UTF-8",
+      },
+    });
+  
+    const json = await response.json();
+    setUser(json);
+    console.log(json);
   };
 
   const handleChange = (event) => {

@@ -2,7 +2,7 @@ import { useState } from "react";
 import CreateProfile from "./CreateProfile";
 
 function App() {
-  const [user, setUser] = useState({ id: null, username: "", email: "" });
+  const [user, setUser] = useState({ id: null, username: "", email: "" });  
 
   return (
     <>
