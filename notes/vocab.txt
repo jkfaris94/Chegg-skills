@@ -42,3 +42,6 @@ Side effect: Anything in a function or expression that affects something outside
 Effect hook: A hook that lets you perform side effects from a React function component.
 Race conditions: When two or more events try to execute at the same time, causing the system to be unstable and vulnerable to an attack.
 Cleanup function: A function that cleans up after previously applied effects to undo an effect for cases like pending API responses.
+Backend routing: Routing in which every page sends a request to the server for an HTML file, and every page requires the browser to download, parse, and render a new HTML file.
+Frontend routing: Routing that is handled from the browser, and the browser only sends a request to the server when necessary.
+Routing: The process of keeping the browser URL in sync with what's displayed on the page.
