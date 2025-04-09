@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import Nav from "./Nav";
 import Home from "./Home";
 import NoMatch from "./NoMatch";
+import UserTodosView from "./UserTodosView"
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -37,7 +38,9 @@ function App() {
   // Create Users list
   const listItems = users.map((user) => (
     <li className="nav-item" key={user.id}>
-      <a className="nav-link link-primary">{user.name}</a>
+      <Link className="nav-link link-primary" to={`/users/${user.id}/todos`}>
+      {user.name}
+      </Link>
     </li>
   ));
 
@@ -54,6 +57,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="*" element={<NoMatch />} />
+              <Route path="/users/:id/todos" element={<UserTodosView />} />
             </Routes>
           </section>
         </div>

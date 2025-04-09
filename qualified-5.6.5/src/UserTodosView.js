@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 function UserTodosView() {
   const [todos, setTodos] = useState([]);
+
+  const {id} = useParams();
 
   // Load Users
   useEffect(() => {
@@ -23,12 +26,12 @@ function UserTodosView() {
       }
     }
 
-    loadTodosForUser(1);
+    loadTodosForUser(id);
 
     return () => {
       abortController.abort(); // Cancels any pending request or response
     };
-  }, []);
+  }, [id]);
 
   const listItems = todos.map((todo) => (
     <li
