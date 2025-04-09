@@ -47,3 +47,4 @@ Frontend routing: Routing that is handled from the browser, and the browser only
 Routing: The process of keeping the browser URL in sync with what's displayed on the page.
 URL parameter: Also called a param, the part of a URL that is variable and that web applications need to extract.
 Parameter token: The named part of a path that can change values but fits a particular pattern. Often the parameter token provides access to identifying information such as an ID.
+Programmatic navigation: Navigation that causes a user to be redirected as a result of an event—such as logging in or saving—that occurs on a route.
