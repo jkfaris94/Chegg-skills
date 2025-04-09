@@ -49,11 +49,12 @@ function App() {
                 path="/users/:userId"
                 element={<UserView users={users} removeUser={removeUser} />}
               >
-                <Route path="/users/:userId/posts"
+                <Route path="posts"
                 element={<UserPosts users={users} />}
                 >
+                  <Route index element={<p>Choose a post from the left.</p>} />
                   <Route
-                path="/users/:userId/posts/:postId"
+                path=":postId"
                 element={<UserPost users={users} />}
                 />
                 </Route>
