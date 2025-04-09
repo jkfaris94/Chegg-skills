@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, Outlet } from "react-router-dom";
 import { capitalizePostTitle } from "../../util/helpers";
 
 function UserPosts({ users }) {
@@ -25,7 +25,9 @@ function UserPosts({ users }) {
           {postLinks}
         </ul>
       </aside>
-      <section className="col-7"></section>
+      <section className="col-7">
+        <Outlet />
+      </section>
     </div>
   );
 }
