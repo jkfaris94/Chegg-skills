@@ -1,10 +1,11 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 function UserView({ users, removeUser }) {
   const { userId } = useParams();
   const current = users.find(({ id }) => id === Number(userId)) || {};
   const { id, name = "", email } = current;
   const [first, last] = name.split(" ");
+  const navigate = useNavigate();
 
   const manageDeleteUser = () => {
     removeUser(current.id, users);
@@ -15,7 +16,7 @@ function UserView({ users, removeUser }) {
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb justify-content-center">
           <li className="breadcrumb-item">
-            <a href="#">Back</a>
+          <button className="btn btn-link p-0 pb-1" onClick={() => navigate(-1)}>Back</button>
           </li>
           <li className="breadcrumb-item active">{name}</li>
           <li className="breadcrumb-item">
