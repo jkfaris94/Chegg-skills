@@ -20,7 +20,7 @@ function UserView({ users, removeUser }) {
           </li>
           <li className="breadcrumb-item active">{name}</li>
           <li className="breadcrumb-item">
-            <a href="#">Forward</a>
+            <button className="btn btn-link p-0 pb-1" onClick={() => navigate(1)}>Forward</button>
           </li>
         </ol>
       </nav>
