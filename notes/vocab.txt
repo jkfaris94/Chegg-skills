@@ -45,3 +45,5 @@ Cleanup function: A function that cleans up after previously applied effects to 
 Backend routing: Routing in which every page sends a request to the server for an HTML file, and every page requires the browser to download, parse, and render a new HTML file.
 Frontend routing: Routing that is handled from the browser, and the browser only sends a request to the server when necessary.
 Routing: The process of keeping the browser URL in sync with what's displayed on the page.
+URL parameter: Also called a param, the part of a URL that is variable and that web applications need to extract.
+Parameter token: The named part of a path that can change values but fits a particular pattern. Often the parameter token provides access to identifying information such as an ID.
