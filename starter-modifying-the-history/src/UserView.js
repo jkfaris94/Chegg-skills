@@ -9,6 +9,7 @@ function UserView({ users, removeUser }) {
 
   const manageDeleteUser = () => {
     removeUser(current.id, users);
+    navigate("/");
   };
 
   return (
