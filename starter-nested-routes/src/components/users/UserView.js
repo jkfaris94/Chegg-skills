@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, Outlet } from "react-router-dom";
 
 import UserDetails from "./UserDetails";
 
@@ -36,6 +36,7 @@ function UserView({ users, removeUser }) {
         users={users}
         removeUser={removeUser}
       />
+      <Outlet />
     </div>
   );
 }
