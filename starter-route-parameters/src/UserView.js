@@ -3,9 +3,14 @@
   instead of from a file.
 */
 import users from "./data/users";
+import { useParams } from "react-router-dom";
+
 
 function UserView() {
-  const user = {};
+  const { id } = useParams();
+  
+  const user = users.find((user) => user.id === Number(id)) || {};
+ 
 
   return (
     <>
