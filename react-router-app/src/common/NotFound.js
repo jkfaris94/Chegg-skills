@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 /*
-  TODO: Change the <a> below to a <Link> to the home page
+  xxTODO: Change the <a> below to a <Link> to the home page
 */
 
 function NotFound () {
@@ -9,7 +9,7 @@ function NotFound () {
     <main className="container">
       <p>Page not found!</p>
       <p>
-        <a>Return Home</a>
+        <Link to="/">Return Home</Link>
       </p>
     </main>
   );
