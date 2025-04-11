@@ -29,7 +29,7 @@ function App() {
             <Route path="posts-nav" element={<PostsNav/>} />
             <Route path="post-list" element ={<PostList />}>
               <Route path="post-link" element={<PostLink />} />
-              <Route path="Post" element={<Post />} />
+              <Route path=":id" element={<Post />} />
             </Route>
             <Route path="user-profile" element={< UserProfile/>} />
           </Route>
