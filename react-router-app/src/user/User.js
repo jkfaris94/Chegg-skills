@@ -40,10 +40,10 @@ function User () {
         <h2 className="mb-3">{user.name}</h2>
         <ul className="nav nav-tabs">
           <li className="nav-item">
-            <Link className="nav-link" to={`/users/${userID}`}>Profile</Link>
+            <Link className="nav-link" to={`/users/${userId}`}>Profile</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to={`/users/${userID}/posts`}>Posts</Link>
+            <Link className="nav-link" to={`/users/${userId}/posts`}>Posts</Link>
           </li>
         </ul>
 
@@ -60,6 +60,7 @@ function User () {
         )}
       </div>
     }
+     <Outlet />
     </section>
   );
 };
