@@ -31,7 +31,7 @@ function App() {
               <Route path="post-link" element={<PostLink />} />
               <Route path=":id" element={<Post />} />
             </Route>
-            <Route path="user-profile" element={< UserProfile/>} />
+            <Route path="user/:id" element={< UserProfile/>} />
           </Route>
           <Route path="card-list" element={<CardList />}>
             <Route path="card" element={<Card />} />
