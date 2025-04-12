@@ -29,9 +29,9 @@ function App() {
             <Route path="posts-nav" element={<PostsNav/>} />
             <Route path="post-list" element ={<PostList />}>
               <Route path="post-link" element={<PostLink />} />
-              <Route path=":id" element={<Post />} />
+              <Route path={`/users/${userId}/posts/${postId}`} element={<Post />} />
             </Route>
-            <Route path="user/:id" element={< UserProfile/>} />
+            <Route path={`/users/${userId}`}  element={< UserProfile/>} />
           </Route>
           <Route path="card-list" element={<CardList />}>
             <Route path="card" element={<Card />} />

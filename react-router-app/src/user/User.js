@@ -4,11 +4,12 @@ import { fetchUserWithPosts } from "../api";
 import PostList from "./PostList";
 import PostsNav from "./PostsNav";
 import ErrorMessage from "../common/ErrorMessage";
+import { useParams, Link, Outlet } from "react-router-dom";
 
 function User () {
   const [user, setUser] = useState({ posts: [] });
   const [error, setError] = useState(null);
-  const userId = 1; // TODO: This ID will need to be pulled from parameters.
+  const {userId} = useParams(); // xxTODO: This ID will need to be pulled from parameters.
 
   useEffect(() => {
     const abortController = new AbortController();
@@ -19,13 +20,13 @@ function User () {
     return () => abortController.abort();
   }, [userId]);
 
-  // TODO: Change the link below to go back to the home page.
+  // TODO: xxChange the link below to go back to the home page.
 
   if (error) {
     return (
       <ErrorMessage error={error}>
         <p>
-          <a>Return Home</a>
+          <Link to="/">Return Home</Link>
         </p>
       </ErrorMessage>
     );
@@ -39,10 +40,10 @@ function User () {
         <h2 className="mb-3">{user.name}</h2>
         <ul className="nav nav-tabs">
           <li className="nav-item">
-            <a className="nav-link">Profile</a>
+            <Link className="nav-link" to={`/users/${userID}`}>Profile</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link">Posts</a>
+            <Link className="nav-link" to={`/users/${userID}/posts`}>Posts</Link>
           </li>
         </ul>
 
