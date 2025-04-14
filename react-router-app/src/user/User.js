@@ -49,9 +49,8 @@ function User () {
 
         {user.id ? (
           <div className="p-4 border border-top-0">
-            {/* TODO: Change to display sub route content */}
-            <PostList posts={user.posts} />
-            <UserProfile user={user} />
+            {/* xTODO: Change to display sub route content */}
+            <Outlet />
           </div>
         ) : (
           <div className="p-4 border border-top-0">
@@ -60,7 +59,7 @@ function User () {
         )}
       </div>
     }
-     <Outlet />
+    
     </section>
   );
 };
