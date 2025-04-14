@@ -1,6 +1,7 @@
 import Post from "./Post";
 import PostLink from "./PostLink";
 import NoPostSelectedMessage from "./NoPostSelectedMessage";
+import { Outlet } from "react-router-dom";
 
 /*
   TODO: Update the below so that the components show on the appropriate route.
@@ -28,6 +29,7 @@ function PostList ({ posts }) {
         <NoPostSelectedMessage />
         <Post posts={posts} />
       </div>
+      <Outlet />
     </div>
   );
 };

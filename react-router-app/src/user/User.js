@@ -50,6 +50,8 @@ function User () {
         {user.id ? (
           <div className="p-4 border border-top-0">
             {/* xTODO: Change to display sub route content */}
+            <PostList posts={user.posts} />
+            <UserProfile user={user} />
             <Outlet />
           </div>
         ) : (

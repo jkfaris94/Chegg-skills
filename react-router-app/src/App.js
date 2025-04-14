@@ -6,6 +6,7 @@ import Card from "./home/Card";
 import UserProfile from "./user/UserProfile";
 import PostList from "./user/PostList";
 import Post from "./user/Post";
+import NotFound from "./common/NotFound";
 
 function HomePage() {
   return (
@@ -22,16 +23,19 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/users/:userID" element={<User />}>
-            <Route path="posts" element ={<PostList />}>
-              <Route path={"posts/:postId"} element={<Post />} />
-            </Route>
-            <Route index element={< UserProfile/>} />
+
+          <Route path="/users/:userId" element={<User />}>
+            <Route index element={< UserProfile />} />
+            <Route path="posts" element ={<PostList />} >
+              <Route path=":postId" element={<Post />} />
+              </Route>
           </Route>
 
-          <Route path="card-list" element={<CardList />}>
+          <Route path="users" element={<CardList />}>
             <Route path="card" element={<Card />} />
           </Route>
+
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
   );

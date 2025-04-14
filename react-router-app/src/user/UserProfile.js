@@ -1,4 +1,9 @@
 function UserProfile ({ user }) {
+
+  if (!user) {
+    return <p>Loading user data...</p>; // fallback
+  }
+
   return (
     <div
       className="tab-pane active pt-2"
