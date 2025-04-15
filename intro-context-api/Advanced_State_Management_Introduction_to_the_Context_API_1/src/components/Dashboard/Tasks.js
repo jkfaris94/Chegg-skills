@@ -1,4 +1,9 @@
-function Tasks({ tasks }) {
+import { useContext } from "react";
+import { TasksContext } from "../../contexts/TasksContext";
+
+function Tasks() {
+  const { tasks } = useContext(TasksContext); 
+  
   const taskElements = tasks.map((task) => {
     const color = task.complete ? "secondary" : "primary";
 
