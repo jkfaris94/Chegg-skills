@@ -56,3 +56,4 @@ Continuous integration: The process of building, testing, and merging applicatio
 Component tree: A term that refers to all JSX elements and components under a specific root.
 Prop drilling: The process of accessing props from a parent component by passing it through multiple other components.
 Context provider: A wrapping component that provides all components within the provider's component tree with access to specific values.
+Custom context provider: A component that returns a context provider with access to state variables and functions.
