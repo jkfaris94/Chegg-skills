@@ -53,3 +53,6 @@ Deployment: The process of making a website available for users on the internet.
 Environment: virtual space with a specific configuration where an application runs.
 Developer operations: Abbreviated as DevOps, a methodology that focuses on the operations, such as deployment, of a software development team.
 Continuous integration: The process of building, testing, and merging application code in a shared repository.
+Component tree: A term that refers to all JSX elements and components under a specific root.
+Prop drilling: The process of accessing props from a parent component by passing it through multiple other components.
+Context provider: A wrapping component that provides all components within the provider's component tree with access to specific values.
