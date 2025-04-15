@@ -1,4 +1,7 @@
-function UserProfile ({ user }) {
+import { useOutletContext } from "react-router-dom";
+
+function UserProfile () {
+  const { user } = useOutletContext(); // ✅ pull from Outlet context
 
   if (!user) {
     return <p>Loading user data...</p>; // fallback
