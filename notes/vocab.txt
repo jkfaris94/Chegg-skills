@@ -49,3 +49,7 @@ URL parameter: Also called a param, the part of a URL that is variable and that 
 Parameter token: The named part of a path that can change values but fits a particular pattern. Often the parameter token provides access to identifying information such as an ID.
 Programmatic navigation: Navigation that causes a user to be redirected as a result of an event—such as logging in or saving—that occurs on a route.
 Nested route: Also called a child route, a route that is displayed inside of another route.
+Deployment: The process of making a website available for users on the internet.
+Environment: virtual space with a specific configuration where an application runs.
+Developer operations: Abbreviated as DevOps, a methodology that focuses on the operations, such as deployment, of a software development team.
+Continuous integration: The process of building, testing, and merging application code in a shared repository.
