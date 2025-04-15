@@ -8,7 +8,7 @@ import PostList from "./user/PostList";
 import Post from "./user/Post";
 import NotFound from "./common/NotFound";
 
-// import PostsNav from "./user/PostsNav";
+
 
 function App() {
   return (
