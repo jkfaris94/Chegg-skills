@@ -9,17 +9,20 @@ import { TasksContextProvider } from "./contexts/TasksContext";
 
 import tasksData from "./data/tasks.json";
 import salesData from "./data/sales.json";
+import { SalesContextProvider } from "./contexts/SalesContext";
 
 function App() {
   return (
     <>
       <Header />
       <TasksContextProvider initialData={tasksData}>
+        <SalesContextProvider initialData={salesData}>
         <CurrentStats sales={salesData} />
         <Routes>
           <Route path="/" element={<Dashboard sales={salesData} />} />
           <Route path="*" element={<NoMatch />} />
         </Routes>
+        </SalesContextProvider>
       </TasksContextProvider>
     </>
   );
