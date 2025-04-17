@@ -19,26 +19,17 @@ import callsData from "./data/calls.json";
 
 
 function App() {
-  const [calls, setCalls] = useState(callsData);
   return (
     <>
       <Header />
       <TasksContextProvider initialData={tasksData}>
         <SalesContextProvider initialData={salesData}>
-          <CurrentStats contacts={contactsData} calls={calls} />
+          
             <CallsContextProvider initialData={callsData}>
-              <ContactsContextProvider initialData={callsData}>
+              <ContactsContextProvider initialData={contactsData}>
+              <CurrentStats />
                 <Routes>
-                  <Route
-                    path="/"
-                    element={
-                      <Dashboard
-                        contacts={contactsData}
-                        calls={calls}
-                        setCalls={setCalls}
-                      />
-                    }
-                  />
+                  <Route path="/" element={<Dashboard />} />
                   <Route path="*" element={<NoMatch />} />
                 </Routes>
             </ContactsContextProvider>

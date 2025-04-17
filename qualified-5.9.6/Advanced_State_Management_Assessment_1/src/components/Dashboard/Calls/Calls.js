@@ -2,9 +2,11 @@ import Call from "./Call";
 import NewCallForm from "./NewCallForm";
 import { useContext } from "react";
 import { CallsContext } from "../../../contexts/CallsContext";
+import { ContactsContext } from "../../../contexts/ContactsContext";
 
-function Calls({ contacts }) {
+function Calls() {
   const {calls, setCalls} = useContext(CallsContext);
+  const {contacts} = useContext(ContactsContext);
 
   // Update single call handler
   const updateCall = (call, saleId) => {

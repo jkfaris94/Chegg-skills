@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Contact from "./Contact";
+import { ContactsContext } from "../../../contexts/ContactsContext";
 
-function Contacts({ contacts }) {
+function Contacts() {
   const [search, setSearch] = useState("");
+  const {contacts, setContacts} = useContext(ContactsContext)
   const handleSearch = (event) => {
     setSearch(event.target.value);
   };
