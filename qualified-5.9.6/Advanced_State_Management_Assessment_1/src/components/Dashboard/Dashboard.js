@@ -3,12 +3,13 @@ import Tasks from "./Tasks/Tasks";
 import Sales from "./Sales/Sales";
 import Calls from "./Calls/Calls";
 
-function Dashboard({ contacts, calls, setCalls }) {
+function Dashboard() {
+
   return (
     <main className="container-fluid px-3">
       <div className="row">
         <div className="col-md-3">
-          <Contacts contacts={contacts} />
+          <Contacts />
         </div>
         <div className="col-md-3">
           <Tasks />
@@ -17,7 +18,7 @@ function Dashboard({ contacts, calls, setCalls }) {
           <Sales />
         </div>
         <div className="col-md-3">
-          <Calls contacts={contacts} calls={calls} setCalls={setCalls} />
+          <Calls />
         </div>
       </div>
     </main>
