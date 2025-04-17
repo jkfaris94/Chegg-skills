@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "contactId": 7,
+    "createdAt": "2011-07-18T15:09:17.975Z",
+    "saleId": 1
+  },
+  {
+    "id": 2,
+    "contactId": 13,
+    "createdAt": "2014-10-07T18:04:15.513Z",
+    "saleId": null
+  }
+]
