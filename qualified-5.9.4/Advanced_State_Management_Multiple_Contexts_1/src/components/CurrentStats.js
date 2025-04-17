@@ -1,9 +1,12 @@
 import { useContext } from "react";
 import { TasksContext } from "../contexts/TasksContext";
+import { SalesContext } from "../contexts/SalesContext";
 
-function CurrentStats({ sales }) {
+function CurrentStats() {
+  const { sales } = useContext(SalesContext);
   const { tasks } = useContext(TasksContext);
   const completedTasks = tasks.filter((task) => task.complete).length;
+  const closedSales = sales.filter((sales) => sales.closed).length;
 
   return (
     <section id="current-stats" className="container">
@@ -26,7 +29,7 @@ function CurrentStats({ sales }) {
             className="p-5 bg-danger-subtle d-flex align-items-center justify-content-center"
           >
             <h2 className="text-dark text-center">
-              <span className="text-danger display-5">{ sales.length }</span>
+              <span className="text-danger display-5">{ closedSales }</span>
               <br />
               Sales
             </h2>

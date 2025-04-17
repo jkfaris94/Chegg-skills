@@ -6,10 +6,11 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import NoMatch from "./components/common/NoMatch";
 
 import { TasksContextProvider } from "./contexts/TasksContext";
+import { SalesContextProvider } from "./contexts/SalesContext";
 
 import tasksData from "./data/tasks.json";
 import salesData from "./data/sales.json";
-import { SalesContextProvider } from "./contexts/SalesContext";
+
 
 function App() {
   return (

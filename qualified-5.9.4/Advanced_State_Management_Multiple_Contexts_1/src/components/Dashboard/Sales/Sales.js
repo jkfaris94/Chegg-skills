@@ -1,13 +1,31 @@
 import Sale from "./Sale";
+import { useContext } from "react";
+import { SalesContext } from "../../../contexts/SalesContext";
 
-function Sales({ sales }) {
+function Sales() {
+  const { sales, setSales } = useContext(SalesContext);
+
+  const handleSalesButton = (saleId) => {
+    const selected = sales.find((sale) => sale.saleId === saleId);
+    const index = sales.indexOf(selected);
+    setSales([
+      ...sales.slice(0, index),
+      {...selected, closed: true },
+      ...sales.slice(index + 1),
+    ]);
+  };
+
   const total = sales
-    .filter((sale) => sale.closed)
-    .reduce((acc, sale) => acc + sale.amountInDollars, 0);
-  const amount = new Intl.NumberFormat().format(total);
+  .filter((sale) => sale.closed)
+  .reduce((acc, sale) => acc + sale.amountInDollars, 0);
+const amount = new Intl.NumberFormat().format(total);
 
   const saleElements = sales.map((sale) => (
-    <Sale key={sale.id} sale={sale} />
+    <Sale 
+    key={sale.id} 
+    sale={sale} 
+    handleSalesButton={handleSalesButton}
+    />
   ));
 
   return (
