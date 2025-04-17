@@ -10,7 +10,7 @@ function CurrentStats() {
   const { calls } = useContext(CallsContext);
   const { contacts } = useContext(ContactsContext);
   const completedTasks = tasks.filter((task) => task.complete).length;
-  const callsMade = calls.filter((call) => call.complete).length;
+  const callsMade = calls.length;
   const contactsAmount = contacts.length;
 
 
