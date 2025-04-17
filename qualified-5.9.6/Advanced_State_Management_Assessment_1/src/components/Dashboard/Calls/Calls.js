@@ -1,7 +1,11 @@
 import Call from "./Call";
 import NewCallForm from "./NewCallForm";
+import { useContext } from "react";
+import { CallsContext } from "../../../contexts/CallsContext";
 
-function Calls({ calls, contacts, setCalls }) {
+function Calls({ contacts }) {
+  const {calls, setCalls} = useContext(CallsContext);
+
   // Update single call handler
   const updateCall = (call, saleId) => {
     const index = calls.findIndex((el) => el.id === call.id);
