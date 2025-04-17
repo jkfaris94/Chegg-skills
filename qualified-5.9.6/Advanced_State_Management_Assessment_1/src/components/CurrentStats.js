@@ -1,11 +1,14 @@
 import { useContext } from "react";
 import { TasksContext } from "../contexts/TasksContext";
 import { SalesContext } from "../contexts/SalesContext";
+import { CallsContext } from "../contexts/CallsContext";
 
-function CurrentStats({ contacts, calls }) {
+function CurrentStats({ contacts }) {
   const { tasks } = useContext(TasksContext);
   const { sales } = useContext(SalesContext);
+  const { calls } = useContext(CallsContext);
   const completedTasks = tasks.filter((task) => task.complete).length;
+  const callsMade = calls.filter((call) => call.complete).length;
 
   return (
     <section id="current-stats" className="container-fluid px-3">
@@ -52,7 +55,7 @@ function CurrentStats({ contacts, calls }) {
             className="p-5 bg-success-subtle d-flex align-items-center justify-content-center"
           >
             <h2 className="text-dark text-center fs-3">
-              <span className="text-success display-5">{calls.length}</span>
+              <span className="text-success display-5">{callsMade}</span>
               <br />
               Calls Made
             </h2>
