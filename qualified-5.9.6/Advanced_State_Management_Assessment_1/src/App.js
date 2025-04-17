@@ -9,11 +9,13 @@ import NoMatch from "./components/common/NoMatch";
 import { TasksContextProvider } from "./contexts/TasksContext";
 import { SalesContextProvider } from "./contexts/SalesContext";
 import { CallsContextProvider } from "./contexts/CallsContext";
+import { ContactsContextProvider } from "./contexts/ContactsContext";
 
 import contactsData from "./data/contacts.json";
 import tasksData from "./data/tasks.json";
 import salesData from "./data/sales.json";
 import callsData from "./data/calls.json";
+
 
 
 function App() {
@@ -25,19 +27,21 @@ function App() {
         <SalesContextProvider initialData={salesData}>
           <CurrentStats contacts={contactsData} calls={calls} />
             <CallsContextProvider initialData={callsData}>
-            <Routes>
-              <Route
-                path="/"
-                element={
-                  <Dashboard
-                    contacts={contactsData}
-                    calls={calls}
-                    setCalls={setCalls}
+              <ContactsContextProvider initialData={callsData}>
+                <Routes>
+                  <Route
+                    path="/"
+                    element={
+                      <Dashboard
+                        contacts={contactsData}
+                        calls={calls}
+                        setCalls={setCalls}
+                      />
+                    }
                   />
-                }
-              />
-              <Route path="*" element={<NoMatch />} />
-            </Routes>
+                  <Route path="*" element={<NoMatch />} />
+                </Routes>
+            </ContactsContextProvider>
           </CallsContextProvider>
         </SalesContextProvider>
       </TasksContextProvider>
