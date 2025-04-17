@@ -6,11 +6,11 @@ function Sales() {
   const { sales, setSales } = useContext(SalesContext);
 
   const handleSalesButton = (saleId) => {
-    const selected = sales.find((sale) => sale.saleId === saleId);
+    const selected = sales.find((sale) => sale.id === saleId);
     const index = sales.indexOf(selected);
     setSales([
       ...sales.slice(0, index),
-      {...selected, closed: true },
+      {...selected, closed: !selected.closed },
       ...sales.slice(index + 1),
     ]);
   };
