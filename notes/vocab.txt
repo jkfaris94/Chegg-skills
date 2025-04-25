@@ -59,4 +59,6 @@ Context provider: A wrapping component that provides all components within the p
 Custom context provider: A component that returns a context provider with access to state variables and functions.
 Web framework: Tools and software that help developers build web applications more easily.
 Express: A minimalist web framework for Node.js.
-localhost: A special domain that's available for applications running on your computer.
+localhost: A special domain that's available for applications running on your computer. 
+Middleware: A function that can intercept actions after they are dispatched but before they reach the store's reducers. Some common tasks a middleware may perform include logging the action, routing, or making API calls for data.
+Middleware pipeline: A series of middleware functions.
