@@ -57,3 +57,6 @@ Component tree: A term that refers to all JSX elements and components under a sp
 Prop drilling: The process of accessing props from a parent component by passing it through multiple other components.
 Context provider: A wrapping component that provides all components within the provider's component tree with access to specific values.
 Custom context provider: A component that returns a context provider with access to state variables and functions.
+Web framework: Tools and software that help developers build web applications more easily.
+Express: A minimalist web framework for Node.js.
+localhost: A special domain that's available for applications running on your computer.
