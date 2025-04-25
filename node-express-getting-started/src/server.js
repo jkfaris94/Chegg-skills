@@ -1,12 +1,12 @@
 // With destructuring and default arguments, set the variable PORT
 // to be equal to whatever value is found inside of process.env or default to 5000.
-const { PORT = 5000 } = ProcessingInstruction.env;
+const { PORT = 5000 } = process.env;
 
 // The exported Express application is required.
 const app = require("./app");
 
 // This function will run when the server successfully starts.
-app.listen(PORT, () => console.log(`Listening on port ${PORT}!`));
+const listener = () => console.log(`Listening on port ${PORT}!`);
 
 // The listen() method enables the application to accept incoming network requests.
 // When you invoke this method on your Express application instance, it instructs the underlying Node.js HTTP 
