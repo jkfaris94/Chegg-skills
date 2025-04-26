@@ -64,3 +64,6 @@ Middleware: A function that can intercept actions after they are dispatched but 
 Middleware pipeline: A series of middleware functions.
 Query string: Text that comes at the end of a URL following a question mark (?).
 Query parameter: Key-value pair in a query string, where the key and the value are strings separated by an equal sign (=).
+Router-level middleware: Middleware functions for specific routes.
+Middleware: A function that an Express server runs between receiving a request and responding to that request.
+Abstraction: The extraction of a pattern that's then put into a function.
