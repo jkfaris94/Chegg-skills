@@ -7,14 +7,35 @@ const morgan = require("morgan");
 // When you call that function, you get a new Express application and assign it to a variable.
 const app = express();
 
-const sayHello = (req, res, next) => {
-    // Middleware function body
-    res.send("Hello!");
+const sayHello = (req, res) => {
+    console.log(req.query);
+    const name = req.query.name;
+    const content = name ? `Hello, ${name}!` : "Hello!";
+    res.send(content);
+  };
+
+  const saySomething = (req, res) => {
+    const greeting = req.params.greeting;
+    const name = req.query.name;
+  
+    const content = greeting && name ? `${greeting}, ${name}!` : `${greeting}!`;
+    res.send(content);
+  };
+
+  const sayGoodbye = (req, res) => {
+    res.send("Sorry to see you go!");
   };
   
 app.use(morgan("dev"));
 app.get("/hello", sayHello);
+app.get("/say/goodbye", sayGoodbye);
+app.get("/say/:greeting", saySomething);
 
+
+app.get("/songs", (req, res) => {
+    const title = req.query.title;
+    res.send(title);
+  });
 
 // The Express application is exported to be used in the server.js file.
 module.exports = app;
