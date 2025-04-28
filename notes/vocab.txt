@@ -67,3 +67,8 @@ Query parameter: Key-value pair in a query string, where the key and the value a
 Router-level middleware: Middleware functions for specific routes.
 Middleware: A function that an Express server runs between receiving a request and responding to that request.
 Abstraction: The extraction of a pattern that's then put into a function.
+Representational state transfer: REST, a set of constraints for building web APIs.
+RESTful API: A web API that adheres to the constraints of REST.
+HTTP request method: Also called an HTTP verb, a method that indicates the desired action (such as deleting a resource) to be taken on a given resource.
+API endpoint: A location where a client can send a request to retrieve a resource that exists on the server.
+HTTP response status code: A code sent along with every HTTP response from the server, indicating the server's response to the client.
