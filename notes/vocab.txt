@@ -72,3 +72,4 @@ RESTful API: A web API that adheres to the constraints of REST.
 HTTP request method: Also called an HTTP verb, a method that indicates the desired action (such as deleting a resource) to be taken on a given resource.
 API endpoint: A location where a client can send a request to retrieve a resource that exists on the server.
 HTTP response status code: A code sent along with every HTTP response from the server, indicating the server's response to the client.
+Error handler: A function that returns status codes and error information to the client.
