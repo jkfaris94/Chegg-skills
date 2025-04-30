@@ -52,9 +52,17 @@ function hasText(req, res, next) {
     res.json({ data: foundNote });
   }
 
+  function destroy(req, res) {
+    const { noteId } = req.params;
+    const index = notes.findIndex((note) => note.id === Number(noteId));
+    notes.splice(index, 1);
+    res.sendStatus(204);
+  }
+
 module.exports = {
     create: [hasText, create],
     list,
     read: [noteExists, read],
-    update: [noteExists, hasText, update]
+    update: [noteExists, hasText, update],
+    delete: [noteExists, destroy]
 };
