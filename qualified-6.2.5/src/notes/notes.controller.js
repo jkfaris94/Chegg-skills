@@ -27,13 +27,13 @@ function hasText(req, res, next) {
     const noteId = Number(req.params.noteId);
     const foundNote = notes.find((note) => note.id === noteId);
     if (foundNote) {
+        res.locals.note = foundNote;
       return next();
-    } else {
+    } 
       return next({
         status: 404,
         message: `Note id not found: ${req.params.noteId}`,
       });
-    }
   };
 
   function read(req, res, next) {
@@ -42,8 +42,19 @@ function hasText(req, res, next) {
     res.json({ data: foundNote });
   }
 
+  function update(req, res) {
+    const foundNote = res.locals.note;
+    const { data: { text } = {} } = req.body;
+  
+    // update the note
+    foundNote.text = text;
+  
+    res.json({ data: foundNote });
+  }
+
 module.exports = {
     create: [hasText, create],
     list,
     read: [noteExists, read],
+    update: [noteExists, hasText, update]
 };
