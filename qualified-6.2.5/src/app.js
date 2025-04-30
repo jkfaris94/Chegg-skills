@@ -8,24 +8,24 @@ app.use(express.json());
 
 app.use("/notes", notesRouter);
 
-const noteExists = (req, res, next) => {
-  const noteId = Number(req.params.noteId);
-  const foundNote = notes.find((note) => note.id === noteId);
-  if (foundNote) {
-    return next();
-  } else {
-    return next({
-      status: 404,
-      message: `Note id not found: ${req.params.noteId}`,
-    });
-  }
-};
+// const noteExists = (req, res, next) => {
+//   const noteId = Number(req.params.noteId);
+//   const foundNote = notes.find((note) => note.id === noteId);
+//   if (foundNote) {
+//     return next();
+//   } else {
+//     return next({
+//       status: 404,
+//       message: `Note id not found: ${req.params.noteId}`,
+//     });
+//   }
+// };
 
-app.get("/notes/:noteId", noteExists, (req, res, next) => {
-  const noteId = Number(req.params.noteId);
-  const foundNote = notes.find((note) => note.id === noteId);
-  res.json({ data: foundNote });
-});
+// app.get("/notes/:noteId", noteExists, (req, res, next) => {
+//   const noteId = Number(req.params.noteId);
+//   const foundNote = notes.find((note) => note.id === noteId);
+//   res.json({ data: foundNote });
+// });
 
 // app.get("/notes", (req, res) => {
 //   res.json({ data: notes });
