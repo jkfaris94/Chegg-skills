@@ -31,24 +31,24 @@ app.get("/notes/:noteId", noteExists, (req, res, next) => {
 //   res.json({ data: notes });
 // });
 
-const hasText = (req, res, next) => {
-  const { data: { text } = {} } = req.body;
-  if (text) {
-    return next();
-  }
-  return next({ status: 400, message: "A 'text' property is required." });
-};
+// const hasText = (req, res, next) => {
+//   const { data: { text } = {} } = req.body;
+//   if (text) {
+//     return next();
+//   }
+//   return next({ status: 400, message: "A 'text' property is required." });
+// };
 
-app.post("/notes", hasText, (req, res, next) => {
-  const { data: { text } = {} } = req.body;
+// app.post("/notes", hasText, (req, res, next) => {
+//   const { data: { text } = {} } = req.body;
 
-  const newNote = {
-    id: notes.length + 1, // Assign the next ID
-    text,
-  };
-  notes.push(newNote);
-  res.status(201).json({ data: newNote });
-});
+//   const newNote = {
+//     id: notes.length + 1, // Assign the next ID
+//     text,
+//   };
+//   notes.push(newNote);
+//   res.status(201).json({ data: newNote });
+// });
 
 // Not-found handler
 app.use((req, res, next) => {
