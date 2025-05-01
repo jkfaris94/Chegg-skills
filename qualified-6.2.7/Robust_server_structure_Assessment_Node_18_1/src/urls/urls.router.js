@@ -1,16 +1,31 @@
-const router = require("express").Router();
+const express = require("express");
+const router = express.Router();
 const controller = require("./urls.controller");
-const methodNotAllowed = require("../errors/methodNotAllowed");
+
+// /urls
+router
+  .route("/")
+  .get(controller.list)
+  .post(controller.create)
+  .all(controller.methodNotAllowed);
+
+// /urls/:urlId
+router
+  .route("/:urlId")
+  .get(controller.read)
+  .put(controller.update)
+  .all(controller.methodNotAllowed);
+
+// /urls/:urlId/uses
+router
+  .route("/:urlId/uses")
+  .get(controller.listUsesByUrl)
+  .all(controller.methodNotAllowed);
 
 router
-    .route("/")
-    .get(controller.list)
-    .post(controller.create)
-    .all(methodNotAllowed);
-
-router
-    .route("/:urlId")
-    .put(controller.update)
-    .all(methodNotAllowed);
+  .route("/:urlId/uses/:useId")
+  .get(controller.readUseByUrl)
+  .delete(controller.deleteUseByUrl)
+  .all(controller.methodNotAllowed);
 
 module.exports = router;
