@@ -4,9 +4,10 @@ const controller = require("./urls.controller");
 
 router
     .route("/")
-    .get(controller.list);
+    .get(controller.list)
+    .post(controller.create);
 
 router
-    .route("/urlId");
+    .route("/:urlId");
 
 module.exports = router;
