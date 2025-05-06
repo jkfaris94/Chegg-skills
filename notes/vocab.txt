@@ -89,3 +89,5 @@ Relational database: A type of database in which the relationships between the d
 Relational database management system: Also known as RDBMS, a class of programs that can be used to create, update, and administer a relational database.
 Primary key: A field that uniquely identifies the records in a table.
 Field: A container that stores data in a table.
+Data definition language: DDL, a subset of SQL commands used to define the tables in the database.
+Query: A statement used to retrieve data from a table.
