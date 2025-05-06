@@ -83,3 +83,5 @@ CRUD: An acronym that stands for Create, Read, Update, and Delete.
 Operators: Reserved keywords in MongoDB that start with the $ symbol that allow you to build more flexible queries and update your data.
 Hosted database: Also called a managed database, a cloud-computing service in which the end user pays a cloud service provider for access to a database.
 Instance: A specific installation of a SQL server.
+sudo delete database development: Known as SQL, a computer language designed for managing data stored in relational databases.
+Schema: A container, similar to a folder on your hard drive, that holds named objects; one database can contain multiple schemas.
