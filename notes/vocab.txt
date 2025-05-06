@@ -81,3 +81,5 @@ Collection: A grouping of MongoDB documents.
 BSON document: A set of field-and-value pairs where MongoDB stores data.
 CRUD: An acronym that stands for Create, Read, Update, and Delete.
 Operators: Reserved keywords in MongoDB that start with the $ symbol that allow you to build more flexible queries and update your data.
+Hosted database: Also called a managed database, a cloud-computing service in which the end user pays a cloud service provider for access to a database.
+Instance: A specific installation of a SQL server.
