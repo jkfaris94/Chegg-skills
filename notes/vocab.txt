@@ -85,3 +85,7 @@ Hosted database: Also called a managed database, a cloud-computing service in wh
 Instance: A specific installation of a SQL server.
 sudo delete database development: Known as SQL, a computer language designed for managing data stored in relational databases.
 Schema: A container, similar to a folder on your hard drive, that holds named objects; one database can contain multiple schemas.
+Relational database: A type of database in which the relationships between the data points matter, and that requires a programming language to pull desired data.
+Relational database management system: Also known as RDBMS, a class of programs that can be used to create, update, and administer a relational database.
+Primary key: A field that uniquely identifies the records in a table.
+Field: A container that stores data in a table.
