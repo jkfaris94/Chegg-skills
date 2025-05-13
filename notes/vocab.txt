@@ -95,3 +95,4 @@ One-to-one relationship: A relationship where a single record in one table is re
 One-to-many relationship: A relationship where a single record in one table is related to multiple records in another table.
 Many-to-many relationship: A relationship where multiple records in one table are related to multiple records in another table.
 Entity relationship diagram: Known as ERD, a diagram that lets database designers visualize the tables and the relationships between the tables in a database.
+Composite key: A primary key created from combining multiple columns to guarantee the uniqueness of a record.
