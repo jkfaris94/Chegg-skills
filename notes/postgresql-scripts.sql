@@ -105,3 +105,47 @@ SELECT department, count(*), sum(price), min(price), max(price), avg(price)
 FROM products
 GROUP BY department
 ORDER BY department;
+
+/* UPDATE */
+UPDATE employees
+SET country = 'USA';
+
+/*UPDATE with DEFAULT*/ 
+UPDATE employees
+SET fax = DEFAULT;
+
+/*UPDATE with WHERE*/ 
+UPDATE table_name
+SET column_name_1 = <value_1>,
+    column_name_n = <value_n>
+WHERE <conditions>;
+
+UPDATE employees
+SET reports_to = 'Fibber McGee'
+WHERE reports_to = 'Willie Lyons';
+
+/*multiple*/
+UPDATE employees
+SET job_title = 'Chemical Engineer II', city = 'Lawrenceville'
+WHERE job_title = 'Chemical Engineer' AND city = 'Trenton';
+
+/*DELETE*/
+DELETE FROM <table_name>
+WHERE <conditions>
+
+SELECT * FROM employees
+WHERE job_title = 'VP Sales' AND reports_to <> 'Adele Gonzalez';
+
+DELETE FROM employees
+WHERE job_title = 'VP Sales' AND reports_to <> 'Adele Gonzalez';
+
+/*TRUNCATE TABLE*/
+-- TRUNCATE TABLE removes all rows in the table without scanning every row,
+--  unlike the DELETE statement.
+TRUNCATE TABLE <table_name>;
+
+TRUNCATE TABLE products;
+
+/*multiple*/
+TRUNCATE TABLE <table_name_1>, <table_name_2>, …;
+TRUNCATE TABLE articles, employees;
