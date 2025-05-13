@@ -91,3 +91,7 @@ Primary key: A field that uniquely identifies the records in a table.
 Field: A container that stores data in a table.
 Data definition language: DDL, a subset of SQL commands used to define the tables in the database.
 Query: A statement used to retrieve data from a table.
+One-to-one relationship: A relationship where a single record in one table is related to a single record in another table, and neither column has duplicate records.
+One-to-many relationship: A relationship where a single record in one table is related to multiple records in another table.
+Many-to-many relationship: A relationship where multiple records in one table are related to multiple records in another table.
+Entity relationship diagram: Known as ERD, a diagram that lets database designers visualize the tables and the relationships between the tables in a database.
