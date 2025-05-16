@@ -180,3 +180,39 @@ FROM
   departments d -- Create alias `d` for the `departments` table
   JOIN employees e -- Create alias `e` for the `employees` table
   ON d.manager = e.employee_id;
+
+  /*Left Join Example*/ 
+  SELECT
+  d.department_id AS id,
+  d.department_name AS department,
+  e.first_name,
+  e.last_name
+FROM
+  departments d
+  JOIN -- Recall that the default `JOIN` type is an `INNER JOIN`
+  employees e
+  ON d.manager = e.employee_id;
+
+/*Right Join Example*/ 
+  SELECT
+  e.first_name AS manager_first_name,
+  e.last_name AS manager_last_name,
+  d.department_id AS id,
+  d.department_name AS department
+FROM
+  departments d
+  RIGHT JOIN -- Specify `RIGHT JOIN` as the clause
+  employees e
+  ON d.manager = e.employee_id;
+
+  /*Full Join */
+  SELECT
+  d.department_id AS id,
+  d.department_name AS department,
+  e.first_name,
+  e.last_name
+FROM
+  departments d
+  FULL JOIN -- Specify `FULL JOIN` here
+  employees e
+  on d.manager = e.employee_id;
