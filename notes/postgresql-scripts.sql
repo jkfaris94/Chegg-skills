@@ -155,3 +155,17 @@ SELECT <columns>
 FROM <table1>
   JOIN <table2>
   ON <related columns>;
+
+  /* example joining tables including selected columns*/
+  -- It is also recommended that all column names be qualified with the table name; that is, `employees.salary` rather than just `salary`.
+SELECT
+  departments.department_id,
+  departments.department_name,
+  employees.first_name,
+  employees.last_name,
+  employees.salary
+FROM
+  departments
+  JOIN employees
+  ON departments.manager = employees.employee_id;
+  
