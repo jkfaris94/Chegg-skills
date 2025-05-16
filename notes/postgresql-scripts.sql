@@ -149,3 +149,9 @@ TRUNCATE TABLE products;
 /*multiple*/
 TRUNCATE TABLE <table_name_1>, <table_name_2>, …;
 TRUNCATE TABLE articles, employees;
+
+/* Joining tables */ 
+SELECT <columns>
+FROM <table1>
+  JOIN <table2>
+  ON <related columns>;
