@@ -98,3 +98,6 @@ Entity relationship diagram: Known as ERD, a diagram that lets database designer
 Composite key: A primary key created from combining multiple columns to guarantee the uniqueness of a record.
 Join: A clause that combines two or more tables that are linked by a shared column.
 Alias: A temporary name that you can use to represent a column or table.
+Left join: A left join includes all rows on the left side of a join, regardless of whether it matches a row on the right, and returns NULL values for any unmatched columns.
+Right join: A right join includes all rows on the right side of a join, regardless of whether it matches a row on the left, and returns NULL values for any unmatched columns.
+Full join: A full join collates the results of both left join and right join operations and returns all rows when there is a match in the left table or right table records.
