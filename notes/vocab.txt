@@ -103,3 +103,6 @@ Right join: A right join includes all rows on the right side of a join, regardle
 Full join: A full join collates the results of both left join and right join operations and returns all rows when there is a match in the left table or right table records.
 Knex: A SQL query builder library that you can use with different types of databases to build complex SQL queries using JavaScript.
 knexfile: A file that contains database configurations for different environments.
+Migrations: Like a version-control file for your database that lets you easily modify and share the application's database schema with your coworkers.
+Environment variable: Also called an env var, a key-value pair held by your current operating system and user.
+dotenv: A package that injects environment variables into the appropriate environment.
