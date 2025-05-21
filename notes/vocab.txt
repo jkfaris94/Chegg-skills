@@ -106,3 +106,4 @@ knexfile: A file that contains database configurations for different environment
 Migrations: Like a version-control file for your database that lets you easily modify and share the application's database schema with your coworkers.
 Environment variable: Also called an env var, a key-value pair held by your current operating system and user.
 dotenv: A package that injects environment variables into the appropriate environment.
+Seed files: Files that let you populate your database with test or seed data independent of your migration files.
