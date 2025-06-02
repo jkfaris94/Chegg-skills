@@ -13,14 +13,14 @@ async function commentExists(req, res, next) {
 
 async function list(req, res, next) {
   // your solution here
-  const comments = await service.list();
-  res.json({ data: comments });
+  const data = await service.list();
+  res.json({ data });
 }
 
 async function listCommenterCount(req, res, next) {
   // your solution here
-const counts = await service.listCommenterCount();
-  res.json({ data: counts });
+const data = await service.listCommenterCount();
+  res.json({ data });
 }
 
 async function read(req, res, next) {
@@ -28,6 +28,7 @@ async function read(req, res, next) {
   const { comment } = res.locals;
   res.json({ data: comment });
 }
+
 
 module.exports = {
   list: asyncErrorBoundary(list),
