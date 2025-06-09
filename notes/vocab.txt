@@ -113,3 +113,7 @@ Three-tier architecture: A way of building a web application in three separate p
 Presentation tier: The frontend tier in a three-tier architecture, which consists of the user interface.
 Application tier: The backend tier in a three-tier architecture, which contains the functional business logic that drives an application's core capabilities.
 Data tier: The database tier in a three-tier architecture, which consists of a database.
+Same-origin policy: A policy in which a web browser allows scripts contained in one web page to access data at a different URL, as long as the web page and URL have the same origin.
+Cross-site request forgery: Abbreviated as CSRF, an attack that convinces the victim to submit a malicious request.
+Cross-origin resource sharing: Abbreviated as CORS, a mechanism that allows a web page from one origin to access a resource at different origin.
+Cookie: A small piece of data stored on the user's computer by the web browser that provides a way for websites to remember stateful information.
