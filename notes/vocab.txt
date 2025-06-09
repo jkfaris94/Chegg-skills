@@ -108,3 +108,8 @@ Environment variable: Also called an env var, a key-value pair held by your curr
 dotenv: A package that injects environment variables into the appropriate environment.
 Seed files: Files that let you populate your database with test or seed data independent of your migration files.
 Service: Plain JavaScript designed to group together related functions as a service to the rest of your application.
+Request-response cycle: The path that information takes from the client to the server and then back to the client.
+Three-tier architecture: A way of building a web application in three separate pieces: the frontend, the backend, and the database.
+Presentation tier: The frontend tier in a three-tier architecture, which consists of the user interface.
+Application tier: The backend tier in a three-tier architecture, which contains the functional business logic that drives an application's core capabilities.
+Data tier: The database tier in a three-tier architecture, which consists of a database.
