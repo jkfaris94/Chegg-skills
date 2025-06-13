@@ -119,3 +119,4 @@ Cross-origin resource sharing: Abbreviated as CORS, a mechanism that allows a we
 Cookie: A small piece of data stored on the user's computer by the web browser that provides a way for websites to remember stateful information.
 Inside-out development flow: A full-stack workflow that involves making changes starting with the backend, and fully implementing the feature for the current layer before making any changes to the layer above it.
 Outside-in development flow: A full-stack workflow that involves making changes starting with the frontend, fully implementing a small part of the feature through each layer of the architecture.
+Log levels: A way to indicate the severity of various log messages.
