@@ -120,3 +120,7 @@ Cookie: A small piece of data stored on the user's computer by the web browser t
 Inside-out development flow: A full-stack workflow that involves making changes starting with the backend, and fully implementing the feature for the current layer before making any changes to the layer above it.
 Outside-in development flow: A full-stack workflow that involves making changes starting with the frontend, fully implementing a small part of the feature through each layer of the architecture.
 Log levels: A way to indicate the severity of various log messages.
+Pretty printing: Reformatting text into a structure that is easier for people to read than the original format.
+Trace-level logging: A logging level that aims to capture as much information as possible.
+Debug-level logging: A logging level that aims to capture just enough information to debug a problem.
+Info-level logging: A logging level that aims to capture the significant events in your application, such as the status code of a request or new database record created.
