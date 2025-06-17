@@ -124,8 +124,7 @@ Pretty printing: Reformatting text into a structure that is easier for people to
 Trace-level logging: A logging level that aims to capture as much information as possible.
 Debug-level logging: A logging level that aims to capture just enough information to debug a problem.
 Info-level logging: A logging level that aims to capture the significant events in your application, such as the status code of a request or new database record created.
-Prompt templates: 
-Predefined patterns or structures that help guide the creation of text.
+Prompt templates: Predefined patterns or structures that help guide the creation of text.
 Chain: A sequence of tasks or operations that are performed in order.
 Memory: A system where important information from previous interactions or conversations is stored and can be used to provide context and improve future responses.
 Python: A high-level, interpreted, and general-purpose programming language.
