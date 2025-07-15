@@ -129,3 +129,6 @@ Chain: A sequence of tasks or operations that are performed in order.
 Memory: A system where important information from previous interactions or conversations is stored and can be used to provide context and improve future responses.
 Python: A high-level, interpreted, and general-purpose programming language.
 Kanban: A system or technique of grouping tasks into cards which are then organized according to their current state.
+Algorithm: A well-defined sequence of steps for solving a computational problem.
+Time complexity of an algorithm: The number of instructions (or steps) needed to execute the algorithm.
+Space complexity of an algorithm: The amount of memory used by the algorithm.
