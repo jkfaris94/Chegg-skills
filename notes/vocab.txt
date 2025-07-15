@@ -132,3 +132,5 @@ Kanban: A system or technique of grouping tasks into cards which are then organi
 Algorithm: A well-defined sequence of steps for solving a computational problem.
 Time complexity of an algorithm: The number of instructions (or steps) needed to execute the algorithm.
 Space complexity of an algorithm: The amount of memory used by the algorithm.
+Rate of growth: Also called the order of growth, the rate at which the running time of an algorithm increases as a function of the input size.
+Big O notation: A notation commonly used to describe the order of growth of an algorithm.
