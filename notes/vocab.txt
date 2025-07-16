@@ -134,3 +134,5 @@ Time complexity of an algorithm: The number of instructions (or steps) needed to
 Space complexity of an algorithm: The amount of memory used by the algorithm.
 Rate of growth: Also called the order of growth, the rate at which the running time of an algorithm increases as a function of the input size.
 Big O notation: A notation commonly used to describe the order of growth of an algorithm.
+Auxiliary space: The temporary or extra space used by the algorithm while it is being executed.
+Applicant tracking systems: Also known as ATS, software applications that electronically scan your resume for certain keywords and phrases to see if you're a match for a specific job listing.
