@@ -140,3 +140,4 @@ Searching algorithms: Algorithms that iterate through data to retrieve specific 
 Sorting algorithms: Algorithms that bring order to data, making it easier to search, display, and understand the data.
 Linear search algorithm: Also known as the sequential search algorithm, an algorithm that checks every element in an array, starting from the leftmost element, and continues until the desired element is found.
 Brute-force algorithm: Any algorithm that doesn't use any logic to try to do its job quickly or somehow reduce the number of elements that it searches for a matching value.
+Binary search algorithm: Also known as a half-interval search algorithm, an algorithm to find a specific element located in a sorted array.
