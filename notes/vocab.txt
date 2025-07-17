@@ -138,3 +138,5 @@ Auxiliary space: The temporary or extra space used by the algorithm while it is 
 Applicant tracking systems: Also known as ATS, software applications that electronically scan your resume for certain keywords and phrases to see if you're a match for a specific job listing.
 Searching algorithms: Algorithms that iterate through data to retrieve specific data.
 Sorting algorithms: Algorithms that bring order to data, making it easier to search, display, and understand the data.
+Linear search algorithm: Also known as the sequential search algorithm, an algorithm that checks every element in an array, starting from the leftmost element, and continues until the desired element is found.
+Brute-force algorithm: Any algorithm that doesn't use any logic to try to do its job quickly or somehow reduce the number of elements that it searches for a matching value.
