@@ -147,3 +147,4 @@ Bottom-up recursive function: A function that breaks down the problem into incre
 Stack overflow error: A runtime error where the call stack gets too big and runs out of space.
 Forward phase: Also called the recursive phase, the phase that happens when the function is calling itself and continues until the base case is satisfied.
 Backward phase: Also called the back-out phase, the phase that starts when a function call satisfies the base case, then returns a value to the function that called it, and continues until a value is returned to the initial function call.
+Bubble sort algorithm: Also called sinking sort, a comparison sorting algorithm that repeatedly steps through the elements in an array, compares two adjacent elements, and swaps them if they are in the wrong order.
