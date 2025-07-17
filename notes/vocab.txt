@@ -141,3 +141,9 @@ Sorting algorithms: Algorithms that bring order to data, making it easier to sea
 Linear search algorithm: Also known as the sequential search algorithm, an algorithm that checks every element in an array, starting from the leftmost element, and continues until the desired element is found.
 Brute-force algorithm: Any algorithm that doesn't use any logic to try to do its job quickly or somehow reduce the number of elements that it searches for a matching value.
 Binary search algorithm: Also known as a half-interval search algorithm, an algorithm to find a specific element located in a sorted array.
+Recursion: A problem-solving method that involves a function calling itself.
+Top-down recursive function: A function that calculates the solutions to each subproblem in the forward phase, passing the results of the calculation to the recursive call.
+Bottom-up recursive function: A function that breaks down the problem into increasingly smaller problems until the base case is encountered, and then combines the solutions in the backward phase.
+Stack overflow error: A runtime error where the call stack gets too big and runs out of space.
+Forward phase: Also called the recursive phase, the phase that happens when the function is calling itself and continues until the base case is satisfied.
+Backward phase: Also called the back-out phase, the phase that starts when a function call satisfies the base case, then returns a value to the function that called it, and continues until a value is returned to the initial function call.
