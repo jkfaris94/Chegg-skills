@@ -150,3 +150,6 @@ Backward phase: Also called the back-out phase, the phase that starts when a fun
 Bubble sort algorithm: Also called sinking sort, a comparison sorting algorithm that repeatedly steps through the elements in an array, compares two adjacent elements, and swaps them if they are in the wrong order.
 Merge sort algorithm: A divide-and-conquer algorithm that continuously splits arrays in half until every element is alone in its own array, then merges each subarray in order.
 Quicksort algorithm: Also called a partition exchange sort, an algorithm that works by partitioning an array into two parts, then sorting the parts independently.
+Runtime complexity: The algorithmic efficiency as the size of the input grows larger.
+Space complexity: The storage space that the algorithm requires.
+Stability: Whether or not a sort preserves the order of elements with equal values.
