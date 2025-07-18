@@ -1,0 +1,58 @@
+
+Sort
+Average time
+Best time
+Worst time
+Space
+Stability
+Remarks
+
+Bubble  
+O(n²)
+O(n)
+O(n²)
+Constant
+Stable
+Stops after reaching a sorted array.
+
+Selection
+O(n²)
+O(n²)
+O(n²)
+Constant
+Stable
+Even a perfectly sorted input requires scanning the entire array.
+
+Insertion
+O(n)
+O(n)
+O(n²)
+Constant
+Stable
+In the best case (already sorted), every insert requires constant time.
+
+Heap
+O(n log n)
+O(n log n)
+O(n log n)
+Constant
+Not stable
+By using an input array as storage for the heap, it is possible to achieve constant space.
+
+Merge
+O(n log n)
+O(n log n)
+O(n log n)
+Depends
+Stable
+On arrays, merge sort requires O(n) space. But on linked lists, merge sort requires 
+constant space.
+
+Quick
+O(n log n)
+O(n log n)
+O(n²)
+Constant
+Not stable
+To avoid worst-case scenarios, it can help to pick a pivot value at random or shuffle the 
+array before running the quicksort algorithm.
