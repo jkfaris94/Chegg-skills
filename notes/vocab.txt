@@ -153,3 +153,6 @@ Quicksort algorithm: Also called a partition exchange sort, an algorithm that wo
 Runtime complexity: The algorithmic efficiency as the size of the input grows larger.
 Space complexity: The storage space that the algorithm requires.
 Stability: Whether or not a sort preserves the order of elements with equal values.
+Data structure: A way to organize data in a computer's memory, facilitating efficient access to and modification of the data.
+Set: A collection of unique values.
+Map: A collection of key-value pairs that remembers the insertion order of the keys.
