@@ -156,3 +156,8 @@ Stability: Whether or not a sort preserves the order of elements with equal valu
 Data structure: A way to organize data in a computer's memory, facilitating efficient access to and modification of the data.
 Set: A collection of unique values.
 Map: A collection of key-value pairs that remembers the insertion order of the keys.
+Class: A blueprint for creating objects which makes it easy to create multiple objects that all have similar properties.
+Object-oriented programming: OOP, a programming paradigm where data is stored into objects as individual fields, attributes, or parameters, which the code manipulates through different procedures and methods.
+Class instance: An object built to the specifications of a given class.
+Constructor: A special function that defines how a new instance of a class is created.
+Method: Any function that can be called from another object.
