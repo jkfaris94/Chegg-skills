@@ -161,3 +161,9 @@ Object-oriented programming: OOP, a programming paradigm where data is stored in
 Class instance: An object built to the specifications of a given class.
 Constructor: A special function that defines how a new instance of a class is created.
 Method: Any function that can be called from another object.
+Linked list: An ordered, linear data structure in which each item contains a reference to the next item.
+Head: A reference to the first node in a linked list.
+Tail: The last node in a linked list.
+Singly linked list: A linked list in which each node contains exactly one reference to the next node.
+Doubly linked list: A linked list in which each node contains two references: a reference to the next node and a reference to the previous node.
+Circular linked list: A linked list in which the last node points to the first node or another node before it, thereby forming a loop.
