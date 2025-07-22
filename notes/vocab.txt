@@ -167,3 +167,6 @@ Tail: The last node in a linked list.
 Singly linked list: A linked list in which each node contains exactly one reference to the next node.
 Doubly linked list: A linked list in which each node contains two references: a reference to the next node and a reference to the previous node.
 Circular linked list: A linked list in which the last node points to the first node or another node before it, thereby forming a loop.
+Event loop: A design pattern that a program may use to prioritize certain lines of code for execution.
+Stack: A vertical data structure that stores elements in a last in, first out order.
+Queue: A horizontal data structure that stores data in a first in, first out order.
