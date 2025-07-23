@@ -170,3 +170,8 @@ Circular linked list: A linked list in which the last node points to the first n
 Event loop: A design pattern that a program may use to prioritize certain lines of code for execution.
 Stack: A vertical data structure that stores elements in a last in, first out order.
 Queue: A horizontal data structure that stores data in a first in, first out order.
+Tree structure: A type of structure that includes a single root and multiple levels of organization.
+Root node: A special node with no parent, from which all other nodes descend.
+Leaf node: A node without any children.
+Binary tree: A tree with an additional limitation: each node can only have zero, one, or two children (at most).
+Subtree: A mini tree within a binary tree, whose root can be any node and all of its descendants rooted at that node.
