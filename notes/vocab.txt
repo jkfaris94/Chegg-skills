@@ -180,3 +180,4 @@ Depth-first search: DFS, a tree-traversal algorithm that starts from the root no
 In-order traversal: Traversal in which the left branch of the node is visited, then the current node is handled, and then the right branch is visited.
 Pre-order traversal: Traversal in which the current node is handled first, then the left branch of the node is visited, and then the right branch is visited.
 Post-order traversal: Traversal in which the left branch of the node is visited, then the right branch is visited, and then the current node is handled last.
+Breadth-first search: BFS, a tree-traversal algorithm that starts at the root node and proceeds level by level.
