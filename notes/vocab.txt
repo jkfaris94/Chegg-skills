@@ -176,3 +176,7 @@ Leaf node: A node without any children.
 Binary tree: A tree with an additional limitation: each node can only have zero, one, or two children (at most).
 Subtree: A mini tree within a binary tree, whose root can be any node and all of its descendants rooted at that node.
 Balanced tree: A tree in which each row contains two times as many nodes as the row before.
+Depth-first search: DFS, a tree-traversal algorithm that starts from the root node, explores as far as possible in a subtree, and then backtracks before moving to the next subtree.
+In-order traversal: Traversal in which the left branch of the node is visited, then the current node is handled, and then the right branch is visited.
+Pre-order traversal: Traversal in which the current node is handled first, then the left branch of the node is visited, and then the right branch is visited.
+Post-order traversal: Traversal in which the left branch of the node is visited, then the right branch is visited, and then the current node is handled last.
