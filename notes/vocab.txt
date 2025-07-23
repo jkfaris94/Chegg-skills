@@ -181,3 +181,9 @@ In-order traversal: Traversal in which the left branch of the node is visited, t
 Pre-order traversal: Traversal in which the current node is handled first, then the left branch of the node is visited, and then the right branch is visited.
 Post-order traversal: Traversal in which the left branch of the node is visited, then the right branch is visited, and then the current node is handled last.
 Breadth-first search: BFS, a tree-traversal algorithm that starts at the root node and proceeds level by level.
+Graph: A data structure that consists of a set of vertices (or nodes) and a set of edges connecting pairs of vertices.
+Vertex: A point in a graph, also known as a node, that represents an entity or object.
+Edge: A line connecting two vertices, representing the relationship or connection between them.
+Self-loop: An edge that connects a vertex to itself.
+Degree: The number of edges connected to a vertex.
+Cycle: A loop in the graph that occurs when you can start at a vertex, travel through a series of edges, and return to the starting vertex without retracing any edge.
