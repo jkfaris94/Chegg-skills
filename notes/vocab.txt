@@ -175,3 +175,4 @@ Root node: A special node with no parent, from which all other nodes descend.
 Leaf node: A node without any children.
 Binary tree: A tree with an additional limitation: each node can only have zero, one, or two children (at most).
 Subtree: A mini tree within a binary tree, whose root can be any node and all of its descendants rooted at that node.
+Balanced tree: A tree in which each row contains two times as many nodes as the row before.
