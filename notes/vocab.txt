@@ -187,3 +187,7 @@ Edge: A line connecting two vertices, representing the relationship or connectio
 Self-loop: An edge that connects a vertex to itself.
 Degree: The number of edges connected to a vertex.
 Cycle: A loop in the graph that occurs when you can start at a vertex, travel through a series of edges, and return to the starting vertex without retracing any edge.
+Edge list: A simple list where each element represents an edge in the graph, typically as a pair (or tuple) of vertices.
+Adjacency list: A list where each element corresponds to a vertex and contains a list of the vertices that are adjacent to it.
+Adjacency matrix: A square matrix used to represent a graph, where the entry at row i and column j indicates the presence (or absence) of an edge between vertex i and vertex j.
+Adjacency map: A more sophisticated form of an adjacency list using a map (or dictionary) to associate each vertex with its adjacent vertices.
