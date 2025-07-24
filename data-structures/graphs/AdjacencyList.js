@@ -50,3 +50,16 @@ console.log(graph.hasEdge("B", "C")); // Should log false as no edge was added b
 
 //check neighbors of A
 console.log(graph.getNeighbors("A")); // Should log ['B', 'C']
+
+
+//Algorithm to convert an edge list to an adjacency list
+function buildAdjacencyList(n, edges) {
+  const graph = Array.from({ length: n + 1 }, () => []); // +1 for 1-based indexing
+
+  edges.forEach(([u, v]) => {
+    graph[u].push(v);
+    graph[v].push(u); // For undirected graph, add both connections
+  });
+
+  return graph;
+}

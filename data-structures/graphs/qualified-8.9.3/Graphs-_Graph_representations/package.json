@@ -1,0 +1,20 @@
+{
+  "name": "graph-representations-assignment",
+  "version": "1.0.0",
+  "description": "Graph representations lesson assignment",
+  "main": "src/main.js",
+  "directories": {
+    "doc": "docs",
+    "test": "__tests__"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
