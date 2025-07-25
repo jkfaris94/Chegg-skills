@@ -75,3 +75,44 @@ try {
 } catch (error) {
   console.error("Error:", error.message);
 }
+
+
+
+// Example usage for testing with different course structures
+// Uncomment the following lines to test with different course structures:
+
+
+// const courses1 = [
+//   "Intro to Programming",
+//   "Data Structures",
+//   "Algorithms",
+//   "Web Development"
+// ];
+// const prerequisites1 = [
+//   ["Data Structures", "Intro to Programming"],
+//   ["Algorithms", "Data Structures"]
+// ];
+
+// console.log(
+//   "Topological Sort of Basic Coding Curriculum:",
+//   topologicalSort(courses1, prerequisites1)
+// );
+
+// const courses2 = [
+//   "Advanced JavaScript",
+//   "React Development",
+//   "Node.js Development",
+//   "Full Stack Capstone"
+// ];
+// const prerequisites2 = [
+//   ["React Development", "Advanced JavaScript"],
+//   ["Node.js Development", "Advanced JavaScript"],
+//   ["Full Stack Capstone", "React Development"],
+//   ["Full Stack Capstone", "Node.js Development"]
+// ];
+
+// // Running the topological sort function with the advanced coding curriculum setup
+// console.log(
+//   "Topological Sort of Advanced Coding Curriculum:",
+//   topologicalSort(courses2, prerequisites2)
+// );
