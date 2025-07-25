@@ -195,3 +195,6 @@ Depth-first traversal: A graph traversal method that explores as far down a bran
 Backtracking: In graph traversal, backtracking involves reversing the last step or steps to explore new paths after reaching a dead end or after exploring all paths from a vertex.
 Breadth-first traversal: A graph traversal method that explores all the neighbors at the present depth prior to moving on to nodes at the next depth level.
 Shortest path: A category of problems in graph theory where the goal is to find the minimum path or distance between two nodes in a graph.
+Directed acyclic graph: A type of graph that consists of vertices connected by edges, where each edge has a direction, and there are no cycles.
+Topological sort: An algorithm in graph theory used to linearly order the vertices of a DAG in such a way that for every directed edge u -> v, vertex u comes before v in the ordering.
+Bipartite graph: A graph whose set of vertices can be divided into two distinct sets such that there are no edges that connect vertices within the same set.
