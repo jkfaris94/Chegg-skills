@@ -11,9 +11,11 @@ function countSocialGroups(n, edges) {
     graph[v].push(u);
   }
 
+  // Use DFS to count connected components
   const visited = new Set();
   let count = 0;
 
+  // Depth-First Search function
   function dfs(node) {
     visited.add(node);
     for (const nei of graph[node]) {
