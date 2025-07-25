@@ -1,3 +1,4 @@
+// This function finds the shortest path in a binary maze using BFS.
 function getKnightMoves(chessboard, row, col) {
   // Define all possible "L-shaped" moves a knight can make on a chessboard
   const directions = [
