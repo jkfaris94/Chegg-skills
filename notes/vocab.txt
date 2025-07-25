@@ -194,3 +194,4 @@ Adjacency map: A more sophisticated form of an adjacency list using a map (or di
 Depth-first traversal: A graph traversal method that explores as far down a branch as possible before backtracking.
 Backtracking: In graph traversal, backtracking involves reversing the last step or steps to explore new paths after reaching a dead end or after exploring all paths from a vertex.
 Breadth-first traversal: A graph traversal method that explores all the neighbors at the present depth prior to moving on to nodes at the next depth level.
+Shortest path: A category of problems in graph theory where the goal is to find the minimum path or distance between two nodes in a graph.
