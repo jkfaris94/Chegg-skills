@@ -1,3 +1,5 @@
+//Kahn's algorithm for topological sorting
+
 function topologicalSort(numCourses, prerequisites) {
     let graph = Array.from({ length: numCourses }, () => []);
     let inDegree = Array(numCourses).fill(0);
