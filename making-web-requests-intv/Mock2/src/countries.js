@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 async function getAllCountriesSolution() {
-  const res = await axios.get(`https://restcountries.com/v3.1/all`)
+  const res = await axios.get(`https://restcountries.com/v3.1/all?fields=name,flags`)
   //const res = await axios.get(`https://restcountries.eu/rest/v2/all`)
   let countries = res.data.map(country => {
     return {"name": country.name.common, "region": country.region} 
@@ -17,5 +17,7 @@ async function getCountriesByLanguageSolution(language) {
   })
   return refinedCountries
 }
+
+getAllCountriesSolution();
 
 module.exports = {getAllCountriesSolution, getCountriesByLanguageSolution}
