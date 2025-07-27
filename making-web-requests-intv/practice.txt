@@ -1,0 +1,86 @@
+🔹 Saturday Challenge – CRUD with Axios
+Goal: Practice making API requests and destructuring responses.
+
+Prompt:
+Create a small app using the JSONPlaceholder API that can:
+
+Fetch all posts and log their titles.
+
+Fetch a specific post by postId = 3 and log the title and body.
+
+Create a new post and log the created object.
+
+Update post id = 1 with a new title.
+
+Delete post id = 2.
+
+Bonus:
+Wrap each action in its own async function and use try/catch to handle errors.
+
+🔹 Sunday Challenge – Array Methods Mastery
+Goal: Apply map, filter, find, and reduce to real-world data.
+
+Prompt:
+Fetch all users from https://jsonplaceholder.typicode.com/users.
+
+Use map() to return an array of just the names.
+
+Use filter() to return users who live in a city that starts with "S".
+
+Use find() to locate the user whose username is "Bret".
+
+Use reduce() to build an object counting how many users live in each city.
+
+Bonus:
+Chain methods together and explain the result of each step.
+
+🔹 Monday Challenge – Mock Interview Simulation
+Goal: Bring it all together under time pressure (30 minutes max).
+
+Prompt:
+Build a small getUserPosts(userId) function that:
+
+Accepts a userId.
+
+Fetches all posts.
+
+Filters posts where userId matches.
+
+Maps over them to return an array of { id, title }.
+
+Handles errors gracefully.
+
+js
+Copy
+Edit
+// Expected output format:
+[
+  { id: 1, title: "Post title 1" },
+  { id: 2, title: "Post title 2" },
+  ...
+]
+Bonus:
+Display results in the DOM (optional if practicing in browser).
+
+Explain the entire function as if you were in a live interview.
+
+
+
+
+
+tools:
+axios cheat sheet 
+https://dev.to/raphaelmb/axios-cheatsheet-5edp
+
+JSONPlaceholderAPI 
+https://jsonplaceholder.typicode.com/
+
+javascript visulizer 
+https://www.jsv9000.app/
+
+
+read axios docs:
+https://axios-http.com/docs/intro
+
+read MDN- destructuring assignment
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
