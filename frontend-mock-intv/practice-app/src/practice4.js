@@ -25,10 +25,13 @@ export default function Posts() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
+    const controller = new AbortController(); // Create a controller
+    const signal = controller.signal;
+
     // Fetch posts when component mounts
     async function fetchPosts() {
       try {
-        const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+        const response = await fetch("https://jsonplaceholder.typicode.com/posts", { signal })
         const data = await response.json();
 
         // Only use the first 5 posts
@@ -37,11 +40,19 @@ export default function Posts() {
         // Log the posts for debugging (this will log stale state immediately after setPosts)
         console.log("Fetched posts:", data.slice(0, 5));
       } catch (error) {
-        console.error("Error fetching posts", error);
+        if (error.name === "AbortError") {
+            console.log("Fetch aborted");
+        } else {
+            console.error("Error fetching posts", error);
+        }
       }
     }
 
     fetchPosts();
+
+    return () => {
+        controller.abort();
+    };
   }, []); // empty dependency array means this runs once on mount
 
   // Handle deleting a post
