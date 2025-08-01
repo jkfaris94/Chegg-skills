@@ -4,6 +4,7 @@ import GreetingCard from './practice1';
 import FetchQuote from './practice2';
 import UserListWithFilter from './practice3';
 import Posts from './practice4';
+import Practice5 from './practice5';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
     <FetchQuote />
     < UserListWithFilter />
     <Posts />
-    
+    <Practice5 />
+
     </>
   );
 }
