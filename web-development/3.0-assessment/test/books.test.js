@@ -6,9 +6,9 @@ const {
   getBorrowersForBook,
 } = require("../public/src/books.js");
 
-const accountsFixture = require("./fixtures/accounts.fixture");
-const authorsFixture = require("./fixtures/authors.fixture");
-const booksFixture = require("./fixtures/books.fixture");
+const accountsFixture = require("./fixtures/accounts.fixture.js");
+const authorsFixture = require("./fixtures/authors.fixture.js");
+const booksFixture = require("./fixtures/books.fixture.js");
 
 describe("Books Page", () => {
   let accounts;
