@@ -5,6 +5,7 @@ import FetchQuote from './practice2';
 import UserListWithFilter from './practice3';
 import Posts from './practice4';
 import Practice5 from './practice5';
+import TodoList from './practice6';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
     < UserListWithFilter />
     <Posts />
     <Practice5 />
+    <TodoList />
 
     </>
   );
