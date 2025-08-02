@@ -1,11 +1,13 @@
 import GroceryList from "./GroceryList";
+import Todos from "./TodosList";
 
 function App() {
   const groceryItems = ["Bananas", "Apples", "Oranges"];
-  
+
   return (
-    <div className="App">
+    <div >
       <GroceryList items={groceryItems}/>
+      <Todos />
     </div>
   );
 }
