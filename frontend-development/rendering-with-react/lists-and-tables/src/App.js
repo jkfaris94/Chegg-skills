@@ -1,13 +1,15 @@
 import GroceryList from "./GroceryList";
 import Todos from "./TodosList";
+import TodosListObjects from "./TodosListObjects";
 
 function App() {
-  const groceryItems = ["Bananas", "Apples", "Oranges"];
+
 
   return (
     <div >
-      <GroceryList items={groceryItems}/>
+      <GroceryList />
       <Todos />
+      <TodosListObjects />
     </div>
   );
 }
