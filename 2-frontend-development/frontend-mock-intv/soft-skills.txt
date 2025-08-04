@@ -1,0 +1,34 @@
+data {
+    [
+        q: {What is React?}
+        a: {React is a JavaScript library for building user interfaces.
+            It uses a component-based architecture, so instead of managing one big HTML file, we break the UI into smaller, reusable pieces.
+            React uses a virtual DOM to efficiently update only the parts of the page that change, which makes it fast.
+            Developers can also use features like useState and useEffect—called hooks—to manage state and side effects in functional components.}
+    ]
+    [
+        q: {what are props?}
+        a: {Props in React are short for "properties."
+            They are used to pass data from a parent component to a child component. Props make components reusable by letting them accept dynamic input.
+            Props are read-only, meaning a component can use them but can't change them directly.}
+    ]
+    [
+        q: {What is the DOM?}
+        a: {The DOM, or Document Object Model, is a tree-like representation of a webpage’s structure.
+            Each element in the HTML becomes a node in the DOM tree. JavaScript can use the DOM to read and manipulate page content dynamically.
+            For example, we can change the text of an element or respond to user actions using JavaScript by targeting DOM nodes.}
+    ]
+    [
+        q: {what is the virtual DOM?}
+        a: {The virtual DOM is an in-memory representation of the real DOM.
+            In React, when there are changes to state or props, React updates the virtual DOM first. 
+            Then, it compares it to the previous version using a process called reconciliation. 
+            After finding the differences, React efficiently updates only the parts of the real DOM that changed.}
+    ]
+    [
+        q: {what is state?}
+        a: { State in React is a built-in object that holds data or information about the component.
+            When state changes, the component re-renders to reflect the new data.
+            Unlike props (which are passed in), state is managed within the component itself.}
+    ]
+}
