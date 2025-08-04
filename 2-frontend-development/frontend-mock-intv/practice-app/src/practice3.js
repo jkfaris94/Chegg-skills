@@ -1,8 +1,3 @@
-// Day 3: Lists, Keys, State Lifting
-// Topics: Mapping data, key props, shared state
-// Tasks:
-
-// Build a TodoList component with add/remove functionality
 
 // 🎯 Live Coding Challenge: UserListWithFilter
 
