@@ -19,11 +19,17 @@ function App() {
   setTodos(updatedTodos);
 }
 
+
+  const handleDelete = (idToDelete) => {
+      const updatedTodos = todos.filter(todo => todo.id !== idToDelete)
+      setTodos(updatedTodos)
+  }
+    
   return (
     <div >
       {todos.map((todo) => (
         <div >
-          <TodoItem key={todo.id} todo={todo} onToggle={toggleTodo}/>
+          <TodoItem key={todo.id} todo={todo} onToggle={toggleTodo} onDelete={handleDelete}/>
         </div>
       ))}
     </div>
