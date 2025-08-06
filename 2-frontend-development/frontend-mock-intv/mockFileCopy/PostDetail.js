@@ -9,7 +9,6 @@ function PostDetail({ post }) {
   
  const [comments, setComments] = useState([]);
   
-  
   const fetchComments = () => {
   fetch(`https://jsonplaceholder.typicode.com/posts/${post.id}/comments`)
     .then((response) => response.json())
