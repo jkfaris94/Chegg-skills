@@ -19,6 +19,11 @@ const sayHello = (req, res, next) => {
 
 // app.use(logging);
 app.use(morgan("dev"));
-app.use(sayHello);
+// app.use(sayHello);
+app.get("/hello", sayHello);
+
+app.get("/ping", (req, res) => {
+    res.send("OK")
+})
 
 module.exports = app; // The Express application is exported to be used in the server.js file.
