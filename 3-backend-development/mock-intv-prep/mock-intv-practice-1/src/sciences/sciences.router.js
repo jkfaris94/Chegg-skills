@@ -7,8 +7,6 @@ router
   .route("/")
   .get(controller.list);
 
-
-
 router
   .route("/:scienceId")
   .patch(controller.update);
