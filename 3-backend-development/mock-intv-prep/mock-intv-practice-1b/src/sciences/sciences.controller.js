@@ -1,3 +1,4 @@
+//list all .get
 const list = (req, res) => {
        const knex = req.app.get("db");
        return knex
@@ -7,7 +8,7 @@ const list = (req, res) => {
          .catch(err => res.sendStatus(500)) 
    };
 
-
+//list of category .get
 const listScientists = (req, res) => {
   const { scienceId } = req.params;
   const knex = req.app.get("db");
@@ -20,6 +21,7 @@ const listScientists = (req, res) => {
          .catch(err => res.sendStatus(500)) 
 };
 
+//update .patch/.put 
 const update = (req, res) => {
   const { scienceId } = req.params;
   const knex = req.app.get("db");
@@ -34,6 +36,7 @@ const update = (req, res) => {
   
 };
 
+//create .post
 const create = (req, res, next) => {
   const knex = req.app.get("db");
   const { name, description } = req.body || {};
@@ -62,7 +65,7 @@ const create = (req, res, next) => {
     .catch(next);
 };
 
-
+//read .get
 const read = (req, res) => {
 return res.json(res.locals.science);
 };
