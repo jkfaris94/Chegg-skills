@@ -1,24 +1,31 @@
-const express = require("express");
-const app = express();
+const express = require('express');
+const cors = require('cors');
 
+const usersRouter = require('./users/users.router');
+const postsRouter = require('./posts/posts.router');
+
+const app = express();
+app.use(cors());
 app.use(express.json());
 
-// simple async wrapper to avoid try/catch in every handler
-const asyncHandler = (fn) => (req, res, next) => Promise.resolve(fn(req, res, next)).catch(next);
+app.use('/users', usersRouter);
+app.use('/posts', postsRouter);
 
-app.get("/", (req, res) => res.json({ status: "ok" }));
 
-app.use("/users", require("./users/users.router")(asyncHandler));
-app.use("/posts", require("./users/posts.router")(asyncHandler));
-app.use("/comments", require("./users/comments.router")(asyncHandler));
+// Example test route
+app.get('/health', (req, res) => {
+  res.json({ status: 'ok' });
+});
 
-// 404
-app.use((req, res) => res.status(404).json({ error: `Not found: ${req.originalUrl}` }));
+// 404 handler
+app.use((req, res, next) => {
+  res.status(404).json({ error: `Not found: ${req.originalUrl}` });
+});
 
-// error handler
-app.use((err, _req, res, _next) => {
-  console.error(err);
-  res.status(err.status || 500).json({ error: err.message || "Server error" });
+// Error handler
+app.use((error, req, res, next) => {
+  const { status = 500, message = 'Something went wrong' } = error;
+  res.status(status).json({ error: message });
 });
 
 module.exports = app;

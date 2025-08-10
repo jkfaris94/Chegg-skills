@@ -10,3 +10,6 @@ yarn-error.log*
 
 # Dependency directories
 jspm_packages/
+
+#misc
+.env
