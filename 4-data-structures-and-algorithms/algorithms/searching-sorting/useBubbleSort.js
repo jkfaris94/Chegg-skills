@@ -8,3 +8,7 @@ function compare(left, right) {
 }
 
 console.log(sort(compare, elements));
+
+
+
+//-----worst & avg case - O(n²)----best case - O(n)
