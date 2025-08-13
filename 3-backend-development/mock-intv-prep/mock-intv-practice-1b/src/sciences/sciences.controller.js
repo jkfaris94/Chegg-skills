@@ -1,4 +1,3 @@
-//list all .get
 const list = (req, res) => {
        const knex = req.app.get("db");
        return knex
@@ -8,7 +7,7 @@ const list = (req, res) => {
          .catch(err => res.sendStatus(500)) 
    };
 
-//list of category .get
+
 const listScientists = (req, res) => {
   const { scienceId } = req.params;
   const knex = req.app.get("db");
@@ -21,7 +20,6 @@ const listScientists = (req, res) => {
          .catch(err => res.sendStatus(500)) 
 };
 
-//update .patch/.put 
 const update = (req, res) => {
   const { scienceId } = req.params;
   const knex = req.app.get("db");
@@ -32,43 +30,35 @@ const update = (req, res) => {
     .update({ name }, ['id', 'name', 'description'])
     .where({id: scienceId})
     .then((data) => res.json(data))
-    .catch(err => res.sendStatus(500));
+    
   
 };
 
-//create .post
-const create = (req, res, next) => {
+//CREATED READ 
+const create = (req, res) => {
   const knex = req.app.get("db");
-  const { name, description } = req.body || {};
+  const { name, description } = req.body;
+  
+  knex
+    .table("sciences")
+    .insert({ name, description }, ['name', 'description'])
+    .then((data) => res.status(201).json(data))
+    .catch(err => res.status(500));
+}
 
-  if (!name) {
-    return res.status(400).json({ error: "A 'name' property is required" });
-  }
-  if (!description) {
-    return res.status(400).json({ error: "A 'description' property is required" });
-  }
+//ADDED ANOTHER MIDDLEWARE FOR DESCRIPTION
+const bodyHasDescriptionProperty = (req, res, next) => {
+  const { description } = req.body;
+  
+  if(description) {
+    return next();
+  } 
+  next({
+    status: 400,
+    message: "A 'description' property is required"
+  });
+}
 
-  knex("sciences")
-    .insert({ name, description }, ["id", "name", "description"])
-    .then((rows) => {
-      // Postgres returns the created row object; SQLite returns the new id
-      if (rows && typeof rows[0] === "object") {
-        return res.status(201).json(rows[0]);
-      }
-      const [id] = rows;
-      return knex("sciences")
-        .select("id", "name", "description")
-        .where({ id })
-        .first()
-        .then((row) => res.status(201).json(row));
-    })
-    .catch(next);
-};
-
-//read .get
-const read = (req, res) => {
-return res.json(res.locals.science);
-};
 
 const bodyHasNameProperty = (req, res, next) => {
   const { name } = req.body;
@@ -92,8 +82,8 @@ const scienceExists = (req, res, next) => {
     .first()
     .then(science => {
     if(science) {
-      res.locals.science = science; // Store the science record
-      return next();
+        res.locals.science = science; // STORE THE LOCAL RECORD
+        return next();
     }
     next({
         status: 404,
@@ -102,16 +92,9 @@ const scienceExists = (req, res, next) => {
   })          
 }
 
-const bodyHasDescription = (req, res, next) => {
-  const { description } = req.body;
-  
-  if(description) {
-    return next();
-  } 
-  next({
-    status: 400,
-    message: "A 'description' property is required"
-  });
+//created read for /sciences/scienceId
+const read = (req, res) => {
+    return res.json(res.locals.science);
 }
 
 
@@ -119,6 +102,6 @@ module.exports = {
   list,
   listScientists: [scienceExists, listScientists],
   update: [scienceExists, bodyHasNameProperty, update],
-  read: [scienceExists, read],
-  create
+  create: [bodyHasNameProperty, bodyHasDescriptionProperty, create],
+  read: [scienceExists, read]
 };
