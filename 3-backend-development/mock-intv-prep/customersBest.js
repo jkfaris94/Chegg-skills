@@ -1,4 +1,4 @@
-//CUSTOMERS.CONTROLLER
+//----------------------------------CUSTOMERS.CONTROLLER----------------------------------
 const service = require("./customers.service");
 const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
 
@@ -33,7 +33,7 @@ module.exports = {
 };
 
 
-//CUSTOMERS.SERVICE
+//----------------------------------CUSTOMERS.SERVICE----------------------------------------------
 const knex = require("../db/connection");
 
 const tableName = "customer";

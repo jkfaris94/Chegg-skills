@@ -15,7 +15,6 @@ async function customerExists(req, res, next) {
 
 function read(req, res) {
   // Complete the implementation of this method.
-//   const { customer: data } = res.locals;
   res.json({ data: res.locals.customer });
 }
 
