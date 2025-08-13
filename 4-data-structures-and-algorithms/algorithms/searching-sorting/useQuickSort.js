@@ -6,3 +6,5 @@ function compare(left, right) {
 }
 
 console.log(sort(compare, [50, 23, 9, 18, 61, 32]));
+
+//Quicksort algorithm usage 
