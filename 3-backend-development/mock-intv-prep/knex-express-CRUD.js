@@ -9,7 +9,7 @@ function list(req, res, next) {
     .catch(next);
 }
 
-// GET /posts/:postId
+// GET(READ) /posts/:postId
 function read(req, res, next) {
   const { postId } = req.params;
 
