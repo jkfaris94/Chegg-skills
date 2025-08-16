@@ -138,10 +138,12 @@ class LinkedList {
     //print list data 
     printListData() {
         let current = this.head;
+        let index = 0;  // set index 
 
         while(current) {
-            console.log(current.data);
+            console.log(current.data, index);
             current = current.next;
+            index++; // increase index count by 1
         }
     }
 }
@@ -156,7 +158,7 @@ ll.insertAt(500, 4);
 
 // ll.removeAt(10);
 // ll.clearList();
-ll.removeLast();
+// ll.removeLast();
 
 ll.printListData();
 // ll.getAt(10);
