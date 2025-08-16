@@ -138,13 +138,27 @@ class LinkedList {
     //print list data 
     printListData() {
         let current = this.head;
-        let index = 0;  // set index 
+        let index = 0;  // set index to 0
 
         while(current) {
             console.log(current.data, index);
             current = current.next;
             index++; // increase index count by 1
         }
+    }
+
+    // count the number of nodes in list
+    countNodes() {
+        let current = this.head;
+        let count = 0;
+
+        while (current) {
+            current = current.next;
+            count++;
+        }
+        
+
+        console.log("node count:", count)
     }
 }
 
@@ -162,3 +176,4 @@ ll.insertAt(500, 4);
 
 ll.printListData();
 // ll.getAt(10);
+ll.countNodes();
