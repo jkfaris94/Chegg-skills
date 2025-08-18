@@ -5,30 +5,28 @@
  list the line only once.
 */
 function concordance(data) {
-  let result = {}
-  
-  //go through each line in the data 
-  for (let i = 0; i < data.length; i++) {
-    //convert to lowercase and split into words 
-    const words = data[i].toLowerCase().split(/[\s.,';]/);
-    
-    // use Set to remember what words have been seen on this line 
-    const seen = new Set();
-    
-    for (let word of words) {
-      if (word === "") continue; //skip empty strings
-      
-      // only add the line number if we havent already for this word on line
-      if (!seen.has(word)) {
-        if (!result[word]) {
+  let result = {}; // Initialize an empty object to store the concordance 
+
+  // Iterate through each line of data array, index = line number
+  for (let i = 0; i < data.length; i++) { 
+
+    // Convert line to lowercase and split into words
+    const words = data[i].toLowerCase().split(/[\s.,';]/); 
+    const seen = new Set(); // Create Set to track unique words to avoid duplicates 
+
+    for (let word of words) { // Process each word in the current line
+      if (word === "") continue; // Skip empty strings 
+
+      if (!seen.has(word)) { // Check if word hasn't been seen 
+        if (!result[word]) { // If word not in concordance, init empty array for it
           result[word] = [];
         }
-        result[word].push(i);
-        seen.add(word);
+        result[word].push(i); // Add the current line number to the word's array
+        seen.add(word); // Mark word as seen on this line
       }
     }
   }
-  return result;
+  return result; // Return the completed concordance object
 }
 
 module.exports = concordance;

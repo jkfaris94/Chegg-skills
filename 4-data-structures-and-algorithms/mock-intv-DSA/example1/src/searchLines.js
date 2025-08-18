@@ -7,27 +7,25 @@
     an array of all sentences containing words in the list
 */
 function searchLines(words, concordance, data) {
-  const lineNumbers = new Set();
-  
-  // Turn the linked list into an array of words (all lowercase)
-  let current = words.head;
-  while (current) {
-    const word = current.value.toLowerCase();
-    //if the word is in concordance, add all its line numbers 
-    if (concordance[word]) {
-        for (let num of concordance[word]) {
-          lineNumbers.add(num);
-        }
+  const lineNumbers = new Set(); // Set for unique line numbers
+  let current = words.head; // Start at linked list head
+
+  while (current) { // Loop through linked list
+    const word = current.value.toLowerCase(); // Get lowercase word
+    if (concordance[word]) { // If word in concordance
+      for (let num of concordance[word]) {
+        lineNumbers.add(num); // Add line numbers        
+      }
     }
-    current = current.next;
+    current = current.next; // Move to next node
   }
-  
-  //get the actual lines from the data using the line numbers 
+  // Build array of lines from line numbers
   const result = [];
   for (let num of lineNumbers) {
-    result.push(data[num]);
+    result.push(data[num]);    
   }
-  return result;
+  
+  return result; // Return matching lines
 }
 
 module.exports = searchLines;
