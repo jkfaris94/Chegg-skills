@@ -1,0 +1,106 @@
+An e-commerce system tracks orders. Each order contains a list of product SKUs. You will build:
+1. An index that maps each SKU to the order indices where it appears.
+2. A search function that, given a linked list of SKUs, returns all orders that contain at least one of
+those SKUs.
+Project Files
+ tests/orders.test.js (read-only)
+ tests/searchOrders.test.js (read-only)
+ src/orders.js (implement indexOrders here)
+ src/searchOrders.js (implement searchOrders here)
+ src/lib/linkedList.js (do not edit)
+ src/lib/node.js (do not edit)
+ src/data.js (do not edit)
+Data Shape (src/data.js)
+Example:
+const orders = [
+[&quot;SKU1&quot;, &quot;SKU2&quot;, &quot;SKU9&quot;],
+[&quot;SKU3&quot;, &quot;SKU9&quot;],
+[&quot;SKU1&quot;, &quot;SKU4&quot;, &quot;SKU9&quot;, &quot;SKU2&quot;],
+[&quot;SKU7&quot;],
+[&quot;SKU4&quot;, &quot;SKU4&quot;, &quot;SKU1&quot;] // duplicate SKU within same order
+];
+module.exports = orders;
+Task 1: Build the SKU → Order Index (src/orders.js)
+Implement function: indexOrders(orderList)
+ Input: 2D array of orders, where each inner array is an array of SKUs.
+ Output: object mapping each SKU to an array of order indices where it appears.
+ Requirements:
+ Traverse the 2D array (nested iteration).
+ For each SKU, add the current order index to its array.
+ If a SKU repeats within the same order (e.g., [&quot;SKU4&quot;,&quot;SKU4&quot;,&quot;SKU1&quot;]), include that
+order index only once for that SKU.
+ Do not mutate orderList.
+ Return {} for an empty orderList.
+
+Example:
+indexOrders(orders) =&gt;
+
+{
+SKU1: ,
+SKU2: ,
+SKU9: ,
+SKU3: ,
+SKU4: ,
+SKU7:
+}
+Task 2: Search Orders by SKUs (src/searchOrders.js)
+Implement function: searchOrders(skuLinkedList, skuIndex, orderList)
+ Inputs:
+ skuLinkedList: a linked list whose nodes hold SKU strings (use src/lib/linkedList.js and
+src/lib/node.js; traverse via head/next).
+ skuIndex: the object returned from indexOrders.
+ orderList: original 2D array of orders.
+ Output: an array of orders (inner arrays) that contain at least one of the SKUs in skuLinkedList.
+ Requirements:
+ Convert the linked list into an array of SKUs by traversing nodes.
+ Look up each SKU in skuIndex; collect all order indices.
+ Deduplicate order indices and sort ascending for deterministic output.
+ Map indices back to the corresponding orders from orderList.
+ Ignore SKUs not found in skuIndex.
+ Return [] if skuLinkedList is empty/null.
+ Do not mutate inputs.
+
+Example:
+Given:
+const idx = indexOrders(orders);
+skuLinkedList: SKU1 → SKU7
+searchOrders(skuLinkedList, idx, orders) =&gt;
+[
+[&quot;SKU1&quot;, &quot;SKU2&quot;, &quot;SKU9&quot;], // index 0
+[&quot;SKU1&quot;, &quot;SKU4&quot;, &quot;SKU9&quot;, &quot;SKU2&quot;], // index 2
+[&quot;SKU7&quot;], // index 3
+[&quot;SKU4&quot;, &quot;SKU4&quot;, &quot;SKU1&quot;] // index 4
+]
+Edge Cases to Handle
+ Empty 2D array: indexOrders([]) =&gt; {} and searchOrders(...) =&gt; [].
+
+ Empty/null linked list: searchOrders =&gt; [].
+ SKUs in the linked list that don’t exist in the index: ignore them gracefully.
+ Duplicate SKUs inside a single order: only index that order once per SKU.
+ Duplicate SKUs inside the linked list (e.g., SKU1 → SKU1): results should still be deduped and
+sorted.
+Deterministic Ordering
+ After collecting indices, dedupe and sort ascending.
+ Tip: Array.from(new Set(indices)).sort((a, b) =&gt; a - b)
+Constraints/Assumptions
+ Treat SKUs as case-sensitive strings.
+ Use objects/hash maps for O(1) lookups.
+ Don’t mutate inputs.
+Time and Space Complexity (be ready to explain)
+ indexOrders with R orders and average C SKUs per order: O(R·C) time, O(U + R) space (U =
+unique SKUs; plus index arrays).
+ Linked list to array with length L: O(L).
+ Lookup/aggregation: ~O(K + M) where K is unique SKUs requested and M is total indices
+gathered, plus O(M log M) for sorting.
+Optional Extensions (for extra confidence)
+1. ALL semantics:
+ Implement searchOrdersAll(skuLinkedList, skuIndex, orderList) that returns only orders
+containing every SKU in the linked list.
+ Approach: intersect the sorted arrays of indices for each SKU.
+2. No Set dedup:
+ Re-implement dedup using an object/boolean map or by sorting then removing adjacent
+duplicates.
+
+3. Helper functions for readability:
+ listToArray(head), buildIndex(matrix), dedupeAndSort(arr), mapIndicesToRows(indices,
+matrix)
