@@ -1,0 +1,30 @@
+indexOrders:
+
+result = {}
+for i in 0..orders.length-1:
+  seen = Set()
+  for sku in orders[i]:
+    if not seen.has(sku):
+      seen.add(sku)
+      result[sku] ||= []
+      result[sku].push(i)
+return result
+
+
+
+
+searchOrders:
+
+if !head: return []
+requested = []
+node = head
+while node:
+  requested.push(node.value)
+  node = node.next
+indices = []
+for sku in requested:
+  if skuIndex[sku]:
+    indices.push(...skuIndex[sku])
+uniqueSorted = Array.from(new Set(indices)).sort(a-b)
+result = uniqueSorted.map(idx => orderList[idx])
+return result
