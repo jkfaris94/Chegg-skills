@@ -14,7 +14,7 @@ function indexOrders(orderList) {
 
         for (let j = 0; j < order.length; j++) {
             const sku = order[j];
-            //skip if already seen in this order
+            // Skip if already seen in this order
             if (seenInThisOrder.has(sku)) continue;
             seenInThisOrder.add(sku);
 
